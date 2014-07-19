@@ -1,0 +1,312 @@
+#photo{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    background: #efefef;
+}
+#photoContent {
+    padding-bottom: 50px;
+}
+#photo_form img{
+    max-width: 200px;
+    max-height: 200px;
+    padding: 4px;
+    /*background-color: #fff;*/
+    margin: 0 auto;
+}
+#photo_form .photo-select-btn .photo-input{
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+/*#photo .home{
+	right: 0;   
+	background: url(/img/toobarbk.png?v=20140605) center 5px no-repeat #2D3038;
+	background-size: 21px auto;
+	border: 1px solid #27292E; 
+}*/
+.photo-form .tips{
+    /*background: url(/img/tips_words.jpg?v=2014) no-repeat 0 0;*/
+    /*background-size: 100% auto;*/
+    margin: 15px 0;
+    margin-top: 0px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #606060;
+    font-family: "黑体";
+}
+#photo .red-btn, #photo .white-btn, #photo .gray-btn{
+    border-radius: 4px;
+    width: 85%;       
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-family: "黑体";
+    font-size: 16px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+#photo .red-btn{    
+    background: -webkit-gradient(linear, left top, left bottom, from(#d42c35), to(#c8141e));
+    color: #FFF;
+}
+#photo .red-btn:active{
+    background: -webkit-gradient(linear, left top, left bottom, from(#c8141e), to(#d42c35));
+}
+#photo .white-btn{
+    border: 1px solid #dedede;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f4f4f4));
+    color: #000;
+}
+#photo .white-btn:active{
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ffffff));
+}
+#photo .gray-btn{
+    background: #b7b7b7;
+    color: #FFF;
+    border: 1px solid #afafaf;
+}
+#photo .gray-btn:active{
+    background: #EEE;    
+}
+.photo-select-btn{        
+    position: relative;
+    margin-top: 20px;
+}
+
+.photo-form .photo-select-btn:hover,.photo-form .photo-select-btn:active{
+    /*background-position: -60px -35px;*/
+}
+.photo-form .photo-search,.photo-form #photo_uploading,.photo-form .result,.photo-form .choosed, #photo_cancel, #photo_error{
+    display: none;
+}
+
+.photo-form-upload .choose{
+    display: none;
+}
+
+.photo-form-upload .wrap{
+    /*max-width: 300px;*/
+    margin: 16px auto 0;
+    position: relative;
+}
+
+.photo-btn {
+    height: 39px;
+}
+.photo-form-upload .result{
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #586374;
+    text-align: center;
+    margin: 0px;
+}
+.photo-form .result2{
+    margin-top: 30px;
+}
+.photo-form-upload .result2{    
+    margin-top: 30px;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.photo-form-upload .tips ,.photo-form-upload #photo_uploading{
+    display: none;
+}
+
+
+/*.photo-form-upload .wrap .left{
+    position: absolute;
+    left:20px;
+}
+.photo-form-upload .wrap .right{
+    position: absolute;
+    right:20px;
+}*/
+
+.photo-form-upload .photo-search, .photo-form-upload .photo-select-btn{
+    /*display: inline-block;
+    width: 47%;
+    margin-left: 1%;
+    margin-right: 1%;*/
+    display: block;
+}
+
+.photo-form-upload .photo-select-btn{
+   /* height:37px;
+    border-radius: 2px;
+    line-height: 37px;
+    text-align: center;
+    color:#fff;
+    font-size: 16px;
+    background: #5cb164;
+    position: relative;*/
+}
+.photo-form-upload .photo-select-btn:hover,.photo-form-upload .photo-select-btn:active{
+    /*background:-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0.01, #F3F3F3), color-stop(0.03, #C5C5C5), color-stop(0.99, #E4E4E4));
+    background-color:#F3F3F3;*/
+}
+.photo-form-upload .photo-search{
+    /*height:37px;
+    border-radius: 2px;
+    line-height: 37px;
+    text-align: center;
+    word-spacing: 2px;
+    color:#fff;
+    font-size: 16px;
+    background: #1e95ff;*/
+}
+.photo-form-upload .photo-search:hover,.photo-form-upload .photo-search:active{
+    /*background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#f15252),to(#ff6b6b));
+    background-color:#f15252; */
+}
+
+#photo_uploading{
+    position: relative;
+}
+
+#photo_uploading .upload-loading-anim{
+    position: absolute;
+    top: 10px;
+    left: 5%;
+}
+.photo-form-upload #photo_uploading:active{
+    background-color: #b7b7b7;
+
+    /*position: absolute;
+    right: 20px;*/
+    /*width:47%;
+    height:37px;
+    border-radius: 2px;
+    line-height: 37px;
+    text-align: center;
+    font-size: 16px;
+    color:#444444;
+    background-color: #dddddd;*/
+}
+
+.photo-img-wrapper {
+    height: 232px;
+    width: 100%;
+    line-height: 232px;
+    font-size: 0;
+    text-align: center;
+    position: relative;
+}
+
+.photo-img-wrapper img {
+    vertical-align: middle;
+}
+
+.photo-img-wrapper .uploading{
+    display: none;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: rgba(0,0,0,0.8);
+    top: 50%;
+    left: 50%;
+    color: #FFF;
+    text-align: center;
+    margin-left: -50px;
+    margin-top: -50px;
+}
+.photo-img-wrapper .uploadTip{
+    display: none;
+    position: absolute;
+    text-align: center;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    width:100%;
+    bottom: 15px;
+    color: #FFF;
+    font-size: 13px;
+    line-height: 18px;
+    padding:0 6px;
+}
+
+@-webkit-keyframes upload-error-show-anim{
+    0%{
+        -webkit-transform: scale(0.2)
+    }
+    50%{
+        -webkit-transform: scale(0.6)
+    }
+    100%{
+        -webkit-transform: scale(1)
+    }
+}
+
+.upload-error{
+    display: none;
+    background: #000;
+    border-radius: 5px;
+    height: 100px;
+    width: 240px;
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    z-index: 10;
+    /*margin-top: -60px;*/
+    margin-left: -120px;
+    /*background-image: url(http://wap.baidu.com/static/img/webapp/img/upload-error.png);*/
+    /*background-size: 40px 40px;
+    background-position: center 40%;
+    background-repeat: no-repeat;*/
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFF;
+    font-family: "黑体";
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+     /*opacity: 0.6;*/
+}
+.upload-error h2{
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.upload-error p{
+    color: #EEE;
+}
+.upload-error-anim{
+    display: block;
+    -webkit-animation: upload-error-show-anim 200ms ease-in-out 1;
+}
+.photo-img-wrapper .upload-loading-anim{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+}
+.upload-failed{
+    display:none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 40%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    background-image: url(/img/upload-failed.gif);
+    background-size: 50px 50px;
+}
+
+#photo_back, #photoback {
+    position: absolute;
+    top: 7px;
+    left:3px;
+    height: 23px;
+    width: 23px;
+    background-image: url(/img/topBarBg.png);
+    background-repeat: no-repeat;
+    background-position: 0 -53px;
+    background-size: 23px 197px;
+    border:none;
+}

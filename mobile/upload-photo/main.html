@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../reset.css">
+    <title>photo upload</title>
+</head>
+<body>
+    <section id="photo" class="page">   
+        <div id="photoContent">
+            <div class="upload-error">
+                <h2>对不起，主人！</h2>
+                <p>没有帮你搜索成功，请再试试。</p>
+            </div>
+            <textarea id='photo_tpl' style='display:none;'>
+            <!-- 模板部分 -->
+            <input type="file" id="photo_input" name="imagefile" class="photo-input" accept="image/*"/><input id="file_img" name="image" type="hidden"/><span class="choose">上传照片</span><span class="choosed">重新上传</span>                   
+            <!-- 模板结束 -->   
+            </textarea>
+            <form id="photo_form" class="photo-form">
+                <div class="photo-img-wrapper">
+                    <img id="photo_defalut_img" src="photo.png" />
+                    <div id="photo_preview_ct"></div>
+                    <div class="uploading">
+                        <div class="upload-failed"></div>
+                        <div class="upload-loading-anim"></div>
+                        <div class="uploadTip"></div>
+                    </div>
+                </div>
+
+                <div class="tips mt15">快上传照片，搜索相似的图片吧！</div>
+                <img id="photo_defalut_img" src="http://m.baidu.com/static/img/webapp/img/photo_select_btn.png" style="display:none"/>
+                <div class="wrap result">
+                    <span id="photo_rate" class="left"></span>
+                    <span id="photo_size" class="right"></span>
+                </div>
+                <div id="canvasArea" style="display:none"></div>
+
+                <div class="wrap result2">
+                    <div id="photo_upload" class="photo-search red-btn">发起搜索</div>
+                    <div id="photo_uploading" class="gray-btn"><em class="upload-loading-anim"></em><span>搜索中...</span></div>
+                    <div id="photo_cancel" class="photo-select-btn white-btn">取消搜索</div>
+                    <div id="photo_reselect" class="photo-select-btn red-btn">            
+                        <input type="file" id="photo_input" name="imagefile" class="photo-input" accept="image/*">
+                        <input id="file_img" name="image" type="hidden">
+                        <span class="choose">上传照片</span>
+                        <span class="choosed">重新上传</span>                   
+                    </div>                                                               
+                </div>
+            </form>
+        </div>
+</section>
+</body>
+</html>
+
