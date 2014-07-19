@@ -1,0 +1,263 @@
+/* reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
+    -webkit-text-size-adjust: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    font-family: arial, sans-serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clearfix:after {
+    content: '\0020';
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* 导航功能 */
+
+
+/* 上传样式 */
+#face{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+#faceContent {
+    padding-bottom: 50px;
+}
+#face_form img{
+    max-width:200px;
+    max-height:150px;
+    padding:4px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+#face_form .face-select-btn .face-input{
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+/*#face .home{
+    right: 0;   
+    background: url(/img/toobarbk.png?v=20131023) center 5px no-repeat #2D3038;
+    background-size: 21px auto;
+    border: 1px solid #27292E; 
+}*/
+.face-form .tips{
+    background: url(tips_words.jpg) no-repeat 0 0;
+    background-size: 100% auto;
+    display: block;
+    width:94%;
+    margin: -10px auto 0;
+    height:84px;
+}
+.face-form .face-select-btn{
+    width:65px;
+    height:65px;
+    overflow: hidden;
+    background: url(face_select_btn.png) no-repeat;
+    background-size: 65px;
+    margin:  0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.face-form .face-select-btn:hover,.face-form .face-select-btn:active{
+    /*background-position: -60px -35px;*/
+}
+.face-form .face-search,.face-form #face_uploading,.face-form .result,.face-form .choose, #face_cancel{
+    display: none;
+}
+
+.face-form-upload .wrap{
+    max-width: 300px;
+    margin: 16px auto 0;
+    position: relative;
+}
+
+.face-btn {
+    height: 39px;
+}
+.face-form-upload .result{
+    height:20px;
+    font-size: 14px;
+    line-height: 20px;
+    color:#586374;
+    text-align: center;
+}
+.face-form-upload .result2{
+    height:50px;
+    max-width: 98%;
+}
+.face-form-upload .tips ,.face-form-upload #face_uploading{
+    display: none;
+}
+#face_preview_left,#face_preview_right{
+    position: absolute;    
+    width: 37px;
+    height: 37px;
+    top:120px;
+    text-align: center;    
+    cursor:pointer;
+    background-image: url(rotateButtonBg.png);
+    background-repeat: no-repeat;
+    background-size:37px 99px;
+}
+
+#face_preview_left{
+    left:10px;
+    background-position: 0 -62px;
+}
+#face_preview_left:active{    
+    background-position: 0 -62px;
+}
+#face_preview_right{
+    background-position: 0 0;
+    right:10px;
+}
+#face_preview_right:active{    
+    background-position: 0 0px;
+}
+
+.face-form #face_preview_left,.face-form #face_preview_right{
+    display: none;
+}
+.face-form-upload #face_preview_left,.face-form-upload #face_preview_right{
+    display: none;
+}
+
+/*.face-form-upload .wrap .left{
+    position: absolute;
+    left:20px;
+}
+.face-form-upload .wrap .right{
+    position: absolute;
+    right:20px;
+}*/
+
+.face-form-upload .face-search, .face-form-upload .face-select-btn{
+    display: inline-block;
+    width: 47%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.face-form-upload .face-select-btn{
+    height:37px;
+    border-radius: 2px;
+    line-height: 37px;
+    text-align: center;
+    color:#fff;
+    font-size: 16px;
+    background: #5cb164;
+    position: relative;
+}
+.face-form-upload .face-select-btn:hover,.face-form-upload .face-select-btn:active{
+    /*background:-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0.01, #F3F3F3), color-stop(0.03, #C5C5C5), color-stop(0.99, #E4E4E4));
+    background-color:#F3F3F3;*/
+}
+.face-form-upload .face-search{
+    height:37px;
+    border-radius: 2px;
+    line-height: 37px;
+    text-align: center;
+    word-spacing: 2px;
+    color:#fff;
+    font-size: 16px;
+    background: #1e95ff;
+}
+.face-form-upload .face-search:hover,.face-form-upload .face-search:active{
+    /*background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#f15252),to(#ff6b6b));
+    background-color:#f15252; */
+}
+.face-form-upload #face_uploading{
+    /*position: absolute;
+    right: 20px;*/
+    width:47%;
+    height:37px;
+    border-radius: 2px;
+    line-height: 37px;
+    text-align: center;
+    font-size: 16px;
+    color:#444444;
+    background-color: #dddddd;
+    
+}
+
+.face-img-wrapper {
+    height: 232px;
+    width: 100%;
+    line-height: 232px;
+    font-size: 0;
+    text-align: center;
+}
+
+.face-img-wrapper img {
+    vertical-align: middle;
+}
+
+
+#face_back, #faceback {
+    position: absolute;
+    top: 7px;
+    left:3px;
+    height: 23px;
+    width: 23px;
+    background-image: url(topBarBg.png);
+    background-repeat: no-repeat;
+    background-position: 0 -53px;
+    background-size: 23px 197px;
+    border:none;
+}

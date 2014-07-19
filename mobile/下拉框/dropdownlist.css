@@ -1,0 +1,47 @@
+
+#wifiListWrap{
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+	border-radius: 4px;
+	background-color: #FFF;
+	border: 1px solid #C2DDF3;
+}
+#wifiListWrap a{color:#000; text-decoration: none; position: relative; display: block; width: 100%; height: 100%;}
+#wifiListWrap a b{float:right; height:100%; width:50px; border-left:1px solid #c2ddf3; background: transparent url(img/dropdown.gif) no-repeat center center;}
+body.pc #wifiListWrap a b{background-image: url(img/dropdown_pc.gif)}
+#wifiListWrap a:hover b{background-color: #F7F7F7;}
+#wifiListWrap a span{display: block; height: 100%; background: transparent url(img/needpwd.gif) no-repeat center right}
+#wifiListWrap a span..unneedpwd{background-image: url(img/unneedpwd.gif)}
+#wifiListWrap ul, #wifiListWrap li{padding: 0; margin: 0; list-style: none; cursor: default;}
+#wifiListWrap ul{
+	position: absolute;
+	top:50px;
+	left:-1px;
+	width:100%;
+	height:238px;
+	overflow: scroll;
+	overflow-x:hidden;
+	overflow-y:auto;
+	border-radius: 4px;
+	background-color: #FFF;
+	border: 1px solid #C2DDF3;
+	list-style-position:outside;
+}
+#wifiListWrap li{background: transparent url(img/needpwd.gif) no-repeat center right;line-height: normal; height:50px;}
+#wifiListWrap li.unneedpwd{background-image: url(img/unneedpwd.gif)}
+
+td.text{}
+td.password{width:32px; background: transparent url(img/password.gif) no-repeat center left;}
+td.strength{width:40px; background: transparent url(img/wifi_strength.gif) no-repeat center left;}
+td.droparrow{width:50px; border-left:1px solid #c2ddf3; background: transparent url(img/dropdown.gif) no-repeat center center;}
+body.pc td.droparrow{background-image: url(img/dropdown_pc.gif)}
+.init td.password{visibility: hidden;}
+.init td.strength{visibility: hidden;}
+
+#wifiListWrap a:hover td.droparrow{background-color: #F7F7F7;}
+.unneedpwd td.password{visibility: hidden;}
+.strength_0 td.strength{background-image: url(img/wifi_strength_0.gif)}
+.strength_1 td.strength{background-image: url(img/wifi_strength_1.gif)}
+.strength_2 td.strength{background-image: url(img/wifi_strength_2.gif)}
+.strength_3 td.strength{background-image: url(img/wifi_strength.gif)}

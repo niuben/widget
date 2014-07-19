@@ -1,0 +1,91 @@
+.hotquerylist{
+    float: left;
+    margin-top: 12px;
+    margin-left: 8px;
+    margin-right: 4px;
+    padding-left: 15px;    
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+a.hotquerylist i{
+    color:#F00;
+}
+.hotquerylist i{              
+    border: 1px solid #232323;          
+    border-left: none;
+    cursor: pointer;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #FFF;
+    z-index: 4;
+    display: inline-block;              
+    height: 28px;               
+    font-style: normal;
+    font-size: 14px;
+    font-weight: bold;
+}           
+.hotquerylist::before {
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 13px;
+    top: 3px;
+    background-color: #3C3C3C;
+    border: 1px solid #232323;
+    display: block;
+    content: "";
+    -webkit-transform: matrix(0.6, -0.9, 0.6, 1.0, -7, 2);
+}
+.hotquerylist::after {
+    z-index: 2;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    border-radius: 50%;
+    background: #FFF;
+    top:12px;
+    left:10px;
+    content: ""
+}
+.color1::before,.color1 i{
+    background:#efa438;
+    border-color:#f58906;
+}/*   橙色：*/   
+.color2::before,.color2 i{
+    background:#b0c600;
+    border-color:#9fb300;
+}/*青绿：*/  
+.color3::before,.color3 i{
+    background:#6ca9e3;
+    border-color:#4e94d7;
+}/*轻蓝：*/  
+.color4::before,.color4 i{
+    background:#77b4c0;
+    border-color:#66a6b3;
+}/*青紫：*/  
+.color5::before,.color5 i{
+    background:#de84ab;
+    border-color:#c77095;
+}/*暗粉：*/  
+.color6::before,.color6 i{
+    background:#9fb0b1;
+    border-color:#8a9d9e;
+}/*亮灰：*/
+.color7::before,.color7 i{
+    background:#b08ff5;
+    border-color:#9c7cde;
+}/*紫色：*/  
+.color8::before,.color8 i{
+    background:#56c5aa;
+    border-color:#47a48d;
+}/*绿色：*/              
+.color9::before,.color9 i{
+    background:#de8484;
+    border-color:#c77070;
+}/*暗红：*/

@@ -1,0 +1,64 @@
+.nav {
+    background-color:#424852;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    z-index: 15;
+}
+.nav a:focus{
+    background-color: #444;
+}
+
+/* 整体样式 */
+.nav .back, .nav .home, .nav .search{
+    position: absolute;
+    top: 0px;
+    height: 23px;
+    width: 23px;
+    padding: 10px 15px;   
+    background-image: url(topBarBg.png); 
+    background-repeat: no-repeat;
+    /*background-position: 0 -33px;*/
+    background-size: 23px 197px;
+    background-clip: content-box;
+    -webkit-background-clip: content-box;    
+    background-origin: content;
+    -webkit-background-origin: content;
+}
+/* 后退 */
+.nav .back, #topBar .back{    
+    left: 0px;
+    padding-left: 10px;
+    background-position: 0 -53px;
+}
+.nav .back:active, #topBar .back:active{    
+    background-position: 0 -79px;
+}
+
+/* 首页 */
+.nav .home, #topBar .home{
+    right: 0px;
+    background-position: 0 0;
+    border: none;
+}
+.nav .home:active,.nav .home:hover, #topBar .home:active, #topBar .home:hover{
+    background-position: 0 -26px;
+    /*background-color: #444444;*/
+    /*background-color: transparent;*/
+}
+
+/* 搜索按钮 */
+.nav .search{
+    top: 0px;
+    right: 0px;
+    background-position: 0 -106px;
+    /*background-color: transparent;*/
+}
+.nav .search:active,.nav .search:hover{
+    background-position: 0 -133px;
+    /*background-color: #444444;*/
+}

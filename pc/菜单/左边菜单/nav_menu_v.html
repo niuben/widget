@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>UUR 网页界面集成框架</title>
+<!--框架必需start-->
+<link href="css/import_basic.css" rel="stylesheet" type="text/css"/>
+<link href="skins/sky/import_skin.css" rel="stylesheet" type="text/css" id="skin" themeColor="blue"/>
+<script type="text/javascript" src="js/jquery-1.4.js"></script>
+
+<!--修正IE6支持透明png图片end-->
+<style type="text/css">
+.imcm ul, .imcm li, .imcm div, .imcm span, .imcm a {
+	text-align:left;
+	vertical-align:top;
+	padding:0px;
+	margin:0;
+	list-style:none outside none;
+	border-style:none;
+	background-image:none;
+	clear:none;
+	float:none;
+	display:block;
+	position:static;
+	overflow:visible;
+	line-height:normal;
+}
+.imcm li a img {
+	display:inline;
+	border-width:0px;
+}
+.imcm span {
+	display:inline;
+}
+.imcm .imclear, .imclear {
+	clear:both;
+	height:0px;
+	visibility:hidden;
+	line-height:0px;
+	font-size:1px;
+}
+.imcm .imsc {
+	position:relative;
+}
+.imcm .imsubc {
+	position:absolute;
+	visibility:hidden;
+}
+.imcm li {
+	list-style:none;
+	font-size:1px;
+	float:left;
+}
+.imcm ul ul li {
+	width:100%;
+	float:none !important;
+}
+.imcm a {
+	display:block;
+	position:relative;
+}
+.imcm ul .imsc, .imcm ul .imsubc {
+	z-index:10;
+}
+.imcm ul ul .imsc, .imcm ul ul .imsubc {
+	z-index:20;
+}
+.imcm ul ul ul .imsc, .imcm ul ul ul .imsubc {
+	z-index:30;
+}
+.imde ul li:hover .imsubc {
+	visibility:visible;
+}
+.imde ul ul li:hover .imsubc {
+	visibility:visible;
+}
+.imde ul ul ul li:hover .imsubc {
+	visibility:visible;
+}
+.imde li:hover ul .imsubc {
+	visibility:hidden;
+}
+.imde li:hover ul ul .imsubc {
+	visibility:hidden;
+}
+.imde li:hover ul ul ul .imsubc {
+	visibility:hidden;
+}
+.imcm .imea {
+	display:block;
+	position:relative;
+	left:0px;
+	font-size:1px;
+	line-height:1px;
+	height:0px;
+	width:1px;
+	float:right;
+}
+.imcm .imea span {
+	display:block;
+	position:relative;
+	font-size:1px;
+	line-height:0px;
+}
+.dvs, .dvm {
+	border-width:0px
+}/*\*//*/.imcm .imea{visibility:hidden;}/**/
+</style>
+<!--[if IE]><style type="text/css">.imcm .imea span{position:absolute;}.imcm .imclear,.imclear{display:none;}.imcm{zoom:1;} .imcm li{curosr:hand;} .imcm ul{zoom:1}.imcm a{zoom:1;}</style><![endif]--><!--[if gte IE 7]><style type="text/css">.imcm .imsubc{background-image:url(ie_css_fix);}</style><![endif]--><!--end-->
+
+</head>
+<body>
+<div id="bs_left">
+  <div class="padding_top10">
+    <div class="imrcmain0 imgl imenus_v_main">
+      <div class="imcm imde" id="imouter0" class="imouter_v">
+      <ul id="imenus0" class="imenus_v">
+        <li class="imatm"  style="width:100%;"><a href="javascript:;"><span class="imea imeam"><span></span></span><span class="imea imeam_icon2"><span></span></span>初始页样式模板</a>
+          <div class="imsc">
+            <div class="imsubc" style="width:156px;top:-30px;left:159px;">
+              <div class="imunder"></div>
+              <div></div>
+              <ul style="">
+                <li><a href="templete/example2-1.html" target="frmright">图标导航</a></li>
+                <li><a href="templete/example2-2.html" target="frmright">盒子模型</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        
+        <li class="imatm"  style="width:100%;"><a href="javascript:;"><span class="imea imeam"><span></span></span><span class="imea imeam_icon4"><span></span></span>表格综合模板</a>
+          <div class="imsc">
+            <div class="imsubc" style="width:156px;top:-30px;left:159px;">
+              <div class="imunder"></div>
+              <div></div>
+              <ul style="">
+                <li><a href="templete/example3-1.html" target="frmright">含盒子模型</a></li>
+                <li><a href="templete/example3-2.html" target="frmright">含图标工具栏</a></li>
+                <li><a href="templete/example3-3.html" target="frmright">含迷你型图标工具栏</a></li>
+                <li><a href="templete/example3-4.html" target="frmright">表头固定</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        
+        <li class="imatm"  style="width:100%;"><a href="javascript:;"><span class="imea imeam"><span></span></span><span class="imea imeam_icon6"><span></span></span>表单综合模板</a>
+          <div class="imsc">
+            <div class="imsubc" style="width:156px;top:-30px;left:159px;">
+              <div class="imunder"></div>
+              <div></div>
+              <ul style="">
+                <li><a href="templete/example4-1.html" target="frmright">单列</a></li>
+                <li><a href="templete/example4-2.html" target="frmright">双列</a></li>
+                <li><a href="templete/example4-3.html" target="frmright">分组</a></li>
+                <li><a href="templete/example4-4.html" target="frmright">表单验证</a></li>
+                <li><a href="templete/example4-5.html" target="frmright">复杂表单</a></li>
+                <li><a href="templete/example4-6.html" target="frmright">表单拆分</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        
+        <li class="imatm"  style="width:100%;"><a href="templete/example5-1.html" target="frmright"><span class="imea imeam_icon7"><span></span></span>图片列表综合模板</a></li>
+        <li class="imatm"  style="width:100%;"><a href="javascript:;"><span class="imea imeam"><span></span></span><span class="imea imeam_icon10"><span></span></span>多层级嵌套模板</a>
+          <div class="imsc">
+            <div class="imsubc" style="width:156px;top:-40px;left:159px;">
+              <div class="imunder"></div>
+              <div></div>
+              <ul style="">
+                <li><a href="templete/example6-1.html" target="frmright">横向导航</a></li>
+                <li><a href="templete/example6-2.html" target="frmright">纵向导航</a></li>
+                <li><a href="templete/example6-3.html" target="frmright">综合布局</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        
+        <li class="imatm"  style="width:100%;"><a href="javascript:;"><span class="imea imeam"><span></span></span><span class="imea imeam_icon11"><span></span></span>图表模板</a>
+          <div class="imsc">
+            <div class="imsubc" style="width:156px;top:-40px;left:159px;">
+              <div class="imunder"></div>
+              <div></div>
+              <ul style="">
+                <li><a href="templete/example7-1.html" target="frmright">简单图表</a></li>
+                <li><a href="templete/example7-2.html" target="frmright">复杂图表</a></li>
+                <li><a href="templete/example7-3.html" target="frmright">另类图表</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        
+        <li class="imatm"  style="width:100%;"><a href="javascript:;"><span class="imea imeam"><span></span></span><span class="imea imeam_icon14"><span></span></span>其他</a>
+          <div class="imsc">
+            <div class="imsubc" style="width:156px;top:-30px;left:159px;">
+              <div class="imunder"></div>
+              <div></div>
+              <ul style="">
+                <li><a href="templete/example8-1.html" target="frmright">日程安排</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="imatm"  style="width:100%;"><a href="javascript:;"><span class="imea imeam"><span></span></span><span class="imea imeam_icon3"><span></span></span>多级菜单示例</a>
+          <div class="imsc">
+            <div class="imsubc" style="width:156px;top:-130px;left:159px;">
+              <div class="imunder"></div>
+              <div></div>
+              <ul style="">
+                <li><a target="frmright">第二级1</a></li>
+                <li><a target="frmright">第二级2</a></li>
+                <li><a href="javascript:;"><span class="imea imeas"><span></span></span>第二级3</a>
+                  <div class="imsc">
+                    <div class="imsubc" style="width:150px;top:-123px;left:138px;">
+                      <div class="imunder"></div>
+                      <div></div>
+                      <ul style="">
+                        <li><a target="frmright">第三级1</a></li>
+                        <li><a target="frmright">第三级2</a></li>
+                        <li><a target="frmright">第三级3</a></li>
+                        <li><a target="frmright">第三级4</a></li>
+                        <li><a target="frmright">第三级5</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li><a href="javascript:;"><span class="imea imeas"><span></span></span>第二级4</a>
+                  <div class="imsc">
+                    <div class="imsubc" style="width:150px;top:-183px;left:138px;">
+                      <div class="imunder"></div>
+                      <div></div>
+                      <ul style="">
+                        <li><a target="frmright">第三级6</a></li>
+                        <li><a target="frmright">第三级7</a></li>
+                        <li><a target="frmright">第三级8</a></li>
+                        <li><a target="frmright">第三级9</a></li>
+                        <li><a target="frmright">第三级10</a></li>
+                        <li><a target="frmright">第三级11</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="imatm"  style="width:100%;"><a class="" href="javascript:;"><span class="imea imeam"><span></span></span><span class="imea imeam_icon1"><span></span></span>基本模板</a>
+          <div class="imsc">
+            <div class="imsubc" style="width:155px;top:-30px;left:159px;">
+              <div class="imunder"></div>
+              <div></div>
+              <ul style="">
+                <li><a href="templete/templete_right.html" target="frmright">基本右侧内页模板</a></li>
+                <li><a href="templete/templete_right2.html" target="frmright">上下固定的右侧内页模板</a></li>
+                <li><a href="templete/example1-1.html" target="frmright">弹出窗口内页模板</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="imclear">&nbsp;</div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

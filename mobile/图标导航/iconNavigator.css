@@ -1,0 +1,70 @@
+.navtab{
+    padding:0 12px;
+}
+.navtab a{
+    display:inline-block;
+    width:63px;
+    height:12px;
+    padding-top:56px;
+    text-align: center;
+    position:relative;
+    margin:21px 5px 0;
+    vertical-align: bottom;
+    font:bold 14px/14px normal;
+    color:#545454;
+
+}
+.navtab a:before{
+    content:"";
+    position: absolute;
+    left:8px;
+    top:2px;
+    width:49px;
+    height:50px;
+    background-image: url(http://m.baidu.com/static/img/webapp/img/img/tabs.png);
+    background-size:200px auto ;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+a.page:before{
+    background-position: -2px 0;
+}
+a.hao123:before{
+    background-position: -52px -150px;
+}
+a.tieba:before{
+    background-position: -2px -50px;
+}
+a.wenku:before{
+    background-position:-1px -99px ;
+}
+a.app:before{
+    background-position: -2px -150px;
+}
+a.news:before{
+    background-position:-52px 0px ;
+}
+a.space:before{
+    background-position: -52px -50px;
+}
+a.map:before{
+    background-position: -51px -100px;
+}
+a.video:before{
+    background-position: -101px 0px;
+}
+a.baike:before{
+    background-position: -101px -50px;
+}
+a.shenbian:before{
+    background-position: -102px -100px;
+}
+a.music:before{
+    background-position: -152px 0px;
+}
+a.iknow:before{
+    background-position: -152px -50px;
+}
+a.lvyou:before{
+    background-position: -152px -101px;
+}

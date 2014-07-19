@@ -1,0 +1,139 @@
+.yaan .mess {
+    position: relative;
+    margin: 5px auto;
+    width: 95%;
+    overflow:hidden;
+    border: 1px solid #e4e3df;
+    border-radius: 4px;
+    background: #FFF;
+    box-shadow: 1px 0 1px rgba(0,0,0,0.1),0px 2px 2px rgba(0,0,0,0.1);
+    color: #999;
+    font-size: 13px;
+
+}
+.yaan .mess p {
+    margin-top: 0;
+    line-height:22px; 
+    padding: 0
+}
+.yaan .mess .content .title label{
+    font-size: 18px;
+    margin-left: 2px;
+}
+
+.yaan .havePhone .content .title label{
+    font-size: 16px;
+}
+
+.yaan .mess p label {
+    color: #212226;
+    font-size: 14px
+}
+
+.yaan .mess p span {
+    color: #212226
+}
+
+.yaan .mess p a {
+    color: #212226;
+    text-decoration: underline
+}
+
+.yaan .mess .time {
+    
+    bottom: 0
+}
+.yaan .find{
+    background:url("http://wap.baidu.com/static/img/webapp/img/findpeople.png") no-repeat 100% 0px #FBFBFB;
+}
+.yaan .safe{
+    background:url("http://wap.baidu.com/static/img/webapp/img/besafe.png") no-repeat 100% 0px #FBFBFB;
+}
+.yaan .find .title {
+    color: #e12c25
+}
+.yaan .safe .title {
+    color: #67aa02
+}
+.yaan .find .title label,.yaan .safe .title label {
+    color: #212226;
+    font-size: 14px
+}
+
+.yaan .find .title span,.yaan .safe .title span {
+    color: #212226
+}
+
+.yaan .havePhone .left,.yaan .havePhone .right {
+    float:left;
+}
+
+.yaan .havePhone .left {
+    width: 40%;
+}
+
+.yaan .havePhone .left img {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 100px;
+    max-height: 120px;
+    border: 1px solid #EEE
+}
+
+.yaan .havePhone .right {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 5px;
+    width: 60%;
+}
+
+.yaan .mess .content {
+    margin: 10px;
+    
+}
+.yaan .havePhone .content{
+    margin-top: 5px;
+    background-image:url("data:image/jpg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAPAAA/+4ADkFkb2JlAGTAAAAAAf/bAIQABgQEBAUEBgUFBgkGBQYJCwgGBggLDAoKCwoKDBAMDAwMDAwQDA4PEA8ODBMTFBQTExwbGxscHx8fHx8fHx8fHwEHBwcNDA0YEBAYGhURFRofHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8f/8AAEQgAAQAGAwERAAIRAQMRAf/EAEoAAQAAAAAAAAAAAAAAAAAAAAcBAQAAAAAAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAARAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AH8H/9k=");
+    background-position: 39% 0;
+    background-repeat: repeat-y;
+}
+.yaan .havePhone .content:after{
+      content:".";
+      display:block;
+      clear:both;  
+      height:0;
+      visibility:hidden;  
+}
+.yaan .share{
+    position: absolute;
+    width: auto;
+    height: 25px;
+    line-height: 29px;
+    right: 5px;
+    bottom: 5px;
+    vertical-align: top;
+}
+.yaan .share a{
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-image:url(http://wap.baidu.com/static/img/webapp/img/share.png); 
+    background-size: 58px 25px;
+}
+.yaan .share a:last-child{
+    margin-left: 5px;
+}
+
+.yaan .share a.weibo{
+    background-position: 0px 0px;
+}
+.yaan .share a.qq{
+    background-position: -30px 0px;
+}
+.yaanloading{
+    text-align: center;
+    line-height: 300px
+}
+.yaanmore {
+    display: none
+}

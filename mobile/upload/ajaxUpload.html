@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <title>上传组件</title>
+</head>
+<body>
+    <script type="text/javascript" src="zepto.js"></script>
+    <script type="text/javascript">
+
+        var formData = new FormData(),
+            xhr = new XMLHttpRequest(),
+            upload = xhr.upload,
+            lastProgress,
+            lastTime;
+
+        // formData.append('file',this.file);
+        // upload.addEventListener("progress",function(e){
+        //     if(e.lengthComputable){
+        //         var position = e.position||e.loaded,
+        //             total = e.totalSize||e.total;
+
+        //         //baidu browser bug...
+        //         if(total==0||position==0){
+        //             return;
+        //         }
+        //         var prog = position/total,
+        //             nowTime = new Date().getTime();
+
+        //         var speed = (_this.file.size)*(prog-lastProgress)/((nowTime-lastTime)/1000);
+        //         speed = MFileUploader.formatBytePerSeconds(speed);
+
+        //         _this.onFileUploading && _this.onFileUploading(prog,speed,e);
+        //         lastProgress = prog;
+        //         lastTime = nowTime;
+        //     }
+        //     else{
+        //         throw Error('lengthComputable not support on progress event!');
+        //     }
+        // },false);
+        // // error
+        // upload.addEventListener("load",function(){
+        //     //The XMLHttpRequest's upload load event handler is set trigger the progress event with 100%(to ensure the progress indicator actually reaches 100%, in case of granularity quirks during the process)
+        //     _this.onFileUploadEnd && _this.onFileUploadEnd();
+        // },false);
+
+        // upload.addEventListener("error",function(msg){
+        //     _this.onFileUploadError && _this.onFileUploadError(msg);
+        // },false);
+        
+        // xhr.addEventListener("load",function(){
+        //     _this.onFileUpLoaded && _this.onFileUpLoaded(xhr.responseText);
+        // },false);
+
+        // xhr.open("post", "ajaxUpload.php", true);
+        // xhr.setRequestHeader("HTTP_X_FILENAME", "test");
+        // xhr.send(formData);
+
+        $.ajax({
+            url: "ajaxUpload.php",
+            type: "get",
+            headers: {
+                "x_test": "test"
+            },
+            success: function(msg){
+                console.log(msg);
+            }
+        })
+
+
+    </script>
+</body>
+</html>

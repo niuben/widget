@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <title>上传组件</title>
+</head>
+<body>
+    <input type="file" id="face_input" name="image" class="face-input" accept="image/*" multiple="multiple"/>
+    <img src="" id="face_preview_img" alt="" />
+    <script type="text/javascript" src="zepto.js"></script>
+    <script type="text/javascript">
+        document.getElementById("face_input").onchange = function(e){
+            var file = e.target.files[0];
+
+            var reader = new FileReader();
+            // reader.readAsText(file);
+            reader.onload = function(e) { 
+                //文件预读完成
+
+                var fileName = file.name;
+                var subFix = fileName.split(".")[1];
+                subFix = subFix == "jpg" ? "jpeg" : subFix;
+
+                var imgType = "image/" + subFix;                        
+                var src = reader.result.split(";");
+                src = "data:" + imgType + ";" + src[1];
+                
+                $("#face_preview_img").attr("src", src);
+
+            };
+            reader.readAsDataURL(file);
+        }
+
+    </script>
+</body>
+</html>

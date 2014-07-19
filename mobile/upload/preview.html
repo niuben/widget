@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <title>上传组件</title>
+    <style>
+        div.rounded {
+            width: 100%;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+        }
+        input {
+            display: block;
+        }
+        #previewTable {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="imagesDiv" class="rounded">
+    <label for="chooseFiles">Add Images</label>
+    <input type="file" id="chooseFiles" multiple="multiple" />
+    <table id="previewTable">
+        <thead id="columns"></thead>
+        <tbody id="previews"></tbody>
+    </table>
+</div>
+    <script type="text/javascript" src="zepto.js"></script>
+    <script type="text/javascript">
+    (function (global) {
+        var imagesPerRow = 3,
+            chooseFiles,
+            columns,
+            previews;
+
+        function PreviewImages() {
+            var row;
+
+            Array.prototype.forEach.call(chooseFiles.files, function (file, index) {
+                var cindex = index % imagesPerRow,
+                    oFReader = new FileReader(),
+                    cell,
+                    image;
+
+                if (cindex === 0) {
+                    row = previews.insertRow(Math.ceil(index / imagesPerRow));
+                }
+
+                image = document.createElement("img");
+                image.id = "img_" + index;
+                image.style.width = "100%";
+                image.style.height = "auto";
+                cell = row.insertCell(cindex);
+                cell.appendChild(image);
+
+                oFReader.addEventListener("load", function assignImageSrc(evt) {
+                    image.src = evt.target.result;
+                    this.removeEventListener("load", assignImageSrc);
+                }, false);
+
+                oFReader.readAsDataURL(file);
+            });
+        }
+
+        global.addEventListener("load", function windowLoadHandler() {
+            global.removeEventListener("load", windowLoadHandler);
+            chooseFiles = document.getElementById("chooseFiles");
+            columns = document.getElementById("columns");
+            previews = document.getElementById("previews");
+
+            var row = columns.insertRow(-1),
+                header,
+                i;
+
+            for (i = 0; i < imagesPerRow; i += 1) {
+                header = row.insertCell(-1);
+                header.style.width = (100 / imagesPerRow) + "%";
+            }
+
+            chooseFiles.addEventListener("change", PreviewImages, false);
+        }, false);
+    }(window));
+
+    </script>
+</body>
+</html>

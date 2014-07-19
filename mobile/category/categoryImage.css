@@ -1,0 +1,89 @@
+/*分类列表页头部文字样式*/
+.content {	
+	font-family: "微软雅黑";
+	color: #5f7b98;
+	background-color: #515151;
+}
+.ban {
+	overflow:hidden;
+	padding-top:10px;
+	width:100%;
+}
+.ban li {
+	width:20%;
+	float:right;
+	height:28px;
+	margin-bottom:4px;
+	overflow:hidden;
+	line-height:28px;
+	text-align:center
+}
+.ban li a {
+	display:block;
+	margin-left:5px;
+	background:rgba(255,255,255,0.3);
+}
+.ban li.ban_topic {
+	background:#088cb7;
+	margin-left: 0px;
+	width:20%;
+	float:left;
+	height:60px;
+	text-align:center;
+	color:#fff;
+	line-height:60px;
+	font-size:20px;
+}
+
+.ban li a:link, .ban li a:active, .ban li a:visited {
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.piclist {
+	overflow:hidden;
+	width:100%;
+}
+
+.piclist:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+.piclist li {
+	width:31.7%;
+	float:left;
+	border:1px solid #fff;
+	margin-right:4px;
+	overflow:hidden
+}
+.piclist li:nth-child(3n) {
+	margin-right:0;
+}
+.piclist li a,.piclist li p {
+	width:100%;
+	float:left
+}
+.piclist li p.adtitle {
+	background:rgba(0,0,0,0.5);
+	color:#fff;
+	font-size:10px;
+	display:inline-block;
+	width:200px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	float:right;
+	margin-top:-20px;
+	z-index:999;
+	width:100%;
+}
+.piclist li img {
+	width:100%;
+}
+
+.piclist li.last {

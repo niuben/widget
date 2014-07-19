@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <link rel="stylesheet" href="upload.css" />
+    <title>上传组件</title>
+</head>
+<body>
+	<!--人脸识别页-->
+    <section id="face" class="page">
+        <div id="faceContent">            
+            <form id="face_form" class="face-form">
+                <div class="face-img-wrapper">
+                    <img id="face_preview_img" src="http://m.baidu.com/static/img/webapp/img/upload429.jpg"/>
+                    <canvas id="canvasArea"></canvas>
+                </div>
+                <span class="tips"></span>
+                <div class="wrap result">
+                    <span id="face_size" class="left"></span>
+                    <span id="face_rate" class="right"></span>
+                </div>
+                <!-- <div id="face_preview_left"></div>
+                <div id="face_preview_right"></div>                 -->
+                <div class="wrap result2">
+                    <div id="face_reselect" class="face-select-btn">
+                        <input type="file" id="face_input" name="image" class="face-input" accept="image/*" multiple="multiple"/>
+                        <input type="hidden" name="imgData" id="imgData" value=""/>
+                        <span class="choose">重新拍摄/选择</span>
+                    </div>
+                    <div id="face_cancel" class="face-select-btn">取消上传</div>
+                    <div id="face_upload" class="face-search">上传</div>
+                    <div id="face_uploading">上传中...</div>
+                </div>
+            </form>
+        </div>
+    </section>    
+<script src="zepto.js" type="text/javascript"></script>
+<script src="upload.js" type="text/javascript"></script>
+<script type="text/javascript">
+    function json2Query(json) {
+        if (json == null || typeof json != "object") return json;
+        var query = [];
+        for (var i in json) {
+            query[query.length] = i + "=" + json[i];
+        }
+        return query.join("&");
+    }
+		
+	/* 图片上传，预览，取消上传，质量显示 */
+	var fileEl = $("#face_input")[0];
+	var formEl = $("#face_form")[0];
+	var btnUpload = $('#face_upload')[0];
+    var btnCancel = $('#face_cancel');
+    var btnReselect = $('#face_reselect');
+    
+    var imgData; 
+
+	var uploadForm = new $.uploader({
+		fileEl: fileEl,
+		formEl: formEl,
+		action: "upload.php",
+		uploadEl: btnUpload,
+		onFileSelect: function(file){
+			if (window.FileReader) {
+
+                formEl.className = "face-form-upload";
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function(e) { 
+                    //文件预读完成
+                    var fileName = file.name;
+            
+                    
+                    //图片预览src
+                    var src = reader.result;
+                    // src = "data:" + imgType + ";" + src.substr(16, src.length);
+
+                    formEl.className = "face-form-upload";
+                    console.log($.uploader.formatBytes(src.length));
+
+                    $("#face_preview_img").bind("load" ,function(e){
+                        var scale = 0.2;
+                        var _width = e.target.naturalWidth * scale;
+                        var _height = e.target.naturalHeight * scale;
+
+                        var canvasObj = document.getElementById("canvasArea");
+                        canvasObj.setAttribute("width", _width + 'px');
+                        canvasObj.setAttribute("height", _height + 'px');
+
+                        var canvasImg = canvasObj.getContext("2d");     
+                        canvasImg.drawImage($("#face_preview_img")[0], 0, 0, _width, _height);                    
+
+                        imgData = canvasObj.toDataURL("image/jpeg", 5);
+                        $("#face_preview_img").unbind("load");
+                        $("#face_preview_img").attr("src", imgData);
+                        canvasImg.clearRect(0, 0, _width, _height);
+                        canvasObj.setAttribute("width", '0px');
+                        canvasObj.setAttribute("height", '0px');
+
+                        //文件大小
+                        var size = "大小：" + $.uploader.formatBytes(imgData.length) + "("+ $.uploader.formatBytes(file.size) +")";
+                        $("#face_size").text(size);
+
+                        // $("#imgData").val(imgData);
+                        console.log($.uploader.formatBytes(imgData.length));
+                    });                          
+
+                    $("#face_preview_img").attr("src", src);       
+                };
+            }
+    	},
+    	onFileUpload: function(file){
+    		// alert("upload");
+    	},
+        onFileUploading: function(prog, speed, e) {
+            // console.log(prog * 100 + "%");
+            $("#face_rate").text(parseInt(prog * 100) + "%");
+        },
+    	onFileUpload: function(file){
+            // alert("start");
+    	},
+    	onFileUpLoading: function(prog, speed, e) {
+            // console.log(prog * 100 + "%");
+            $("#face_rate").text(parseInt(prog * 100) + "%");
+    	},
+    	onFileUpLoaded: function(){
+            	// alert("uploaded");
+    	},
+    	onFileUpLoadEnd: function(){
+            	// alert("end");
+    	}
+    });
+	
+    window["FUNC_FACE_UPLOADED"] = function(id) {        
+        alert("face");
+    }
+	
+
+</script>
+</body>
+</html>
