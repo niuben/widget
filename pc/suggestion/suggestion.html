@@ -1,0 +1,30 @@
+<link rel="stylesheet" type="text/css" href="../reset.css" />
+<link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" />
+<link rel="stylesheet" type="text/css" href="suggestion.css" />
+<div class="inpbox">
+    <em class="icon-del"></em>
+    <input type="text" id="searchinp"/>
+    <button id="searchbtn">搜索</button>
+</div>
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="jquery.autocomplete.js"></script>
+<script type="text/javascript">
+	$('#searchinp').autocomplete({
+		valueKey: 'tip_list',
+		titleKey: 'tip',
+		source:[{
+			url: "http://pan.opendev.autonavi.com:3100/service/poiTips?city=110000&words=%QUERY%",
+			type: 'remote',
+			getValue: function(item){
+				return item.data.tip_list;
+			},
+			ajax:{
+				cache: true,
+				dataType : 'json',
+				success: function(msg) {
+					return msg.data;
+				}
+			}
+		}]
+	});	
+</script>
