@@ -165,6 +165,7 @@
 			if (e.keyCode === SHIFTKEY) {
 				ctrlDown = true;
 			}
+			defaultSetting.onkeyPress && defaultSetting.onkeyPress($(e.target).val());
 		})
 		.on('keyup.xdsoftctrl', function (e) {
 			if (e.keyCode === CTRLKEY) {
@@ -173,6 +174,14 @@
 			if (e.keyCode === SHIFTKEY) {
 				ctrlDown = false;
 			}
+
+			var inpValue = $(e.target).val();
+			defaultSetting.onkeyPress && defaultSetting.onkeyPress(inpValue);
+
+			if(e.keyCode == 13 && $.trim(inpValue).length != 0) {
+				defaultSetting.onEnter && defaultSetting.onEnter(inpValue);				
+			}
+
 		});
 	
 	function accentReplace (s) {
@@ -478,6 +487,10 @@
 
 		timeoutUpdate: 10,
 
+		onkeyPress: null,
+		onEnter: null,
+
+
 		get: function (property, source) {
 			return __get.call(this,property,source);
 		},
@@ -663,10 +676,13 @@
 				$dropdown.find('div').removeClass('active');
 				$(this).addClass('active');
 				$input.trigger('pick.xdsoft');
+
+				defaultSetting.onEnter &&  defaultSetting.onEnter(decodeURIComponent($(this).data("value")));
+
 			})
 
 		function manageData(){
-			if ($input.val()!=currentValue){
+			if ($input.val() != currentValue){
 				currentValue = $input.val();
 			} else {
 				return;
@@ -849,15 +865,17 @@
 		});
 		
 		if( options.openOnFocus ){
-			$input.on('focusin.xdsoft',function(){
+			$input.on('focusin.xdsoft',function(e){
 				$input.trigger('open.xdsoft');
 				$input.trigger('updateContent.xdsoft');
+				defaultSetting.onFocus && defaultSetting.onFocus($(e.target).val());
 			});
 		}
 		
 		if( options.closeOnBlur )
-			$input.on('focusout.xdsoft',function(){
+			$input.on('focusout.xdsoft',function(e){
 				$input.trigger('close.xdsoft');
+				defaultSetting.onBlur && defaultSetting.onBlur($(e.target).val());
 			});
 			
 		$box
@@ -1110,7 +1128,8 @@
 			return publics[_options].call(this, _second, _third);
 		}
 		return this.each(function () {
-			var options = $.extend(true, {}, defaultSetting, _options);
+			defaultSetting = $.extend(defaultSetting, _options);
+			var options = $.extend(true, {}, defaultSetting);
 			init(this, options);
 		});
 	};

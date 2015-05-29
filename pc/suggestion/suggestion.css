@@ -1,13 +1,41 @@
-.inpbox {
+/* 搜索框 */
+.searchbox {        
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1002;
+    width: 375px;
+    height: 35px;
+    padding: 12px 0px;
+    background: #0091ff;
+}
+.searchbox img.logo {
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 36px;
+    height: 36px;
+}
+.searchbox .iptbox {
     position: relative;
     margin-top: 2px;
 }
-.inpbox input {
+/*.searchbox .ipbox .del-icon {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    width: 15px;
+    height: 15px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcRJREFUeNqMkz9IAnEUx+9+SApi1x9oEKRaKhdbRCwaanGJlqilpUGiUWgQagsi1yCIjhqCEA5pcGoqQooEbdElOEICEWkQuVMx0NO+T+4Hx2HUgy/+7v2+n+d7z1Ps9/uCLVZM+aE5SIXeoRdTgxBFURAt8Dh0BK0Jv8cTdArVrbAPuoYmhb+jBu0ArjEcWK/XS/wTpJiE/5AOBEcYYwv8JpPJHFer1Turu9vtfqVSqYNWq1UcQIytouMI63Q661ZjOBye8Xq9F+VyWeFgIpGIB4PBT5fLNc194DYcCL8Vdjqdu6j6jZlkVVWbiqI8R6NRHQVlXEvcR906YBobMtc+CjRxd1ssFkcAJpGbshoAe5hhGJqdpFbT6XQWBcRAIKBhBw92D5bWYO12W7WDNGMoFDLwmEKBKL75iu+AB7gPoVQqbcPwxoWtLlUqFR/O95b8HvyeRqMh8xz2sUltuXO53A0WNWu2kzN/ulFbp6+AFrEHt67rWUmS4qxQKLSSyeQJZq+biwgNASmWCSSfLMtn1Llgvp6OWCw2r2nauXUEu+iefObLJQxgswAlJvL5/BbausTiHgmgT3qmPN2Tj/+ZfgQYAEcbH9KLAAltAAAAAElFTkSuQmCC) center center no-repeat;
+}*/
+.searchbox .iptbox input {
     float: left;    
     margin-left: 56px;
-    width: 245px;
-    height: 28px;
-    line-height: 28px;
+    padding-right: 20px;
+    width: 225px;
+    height: 32px;
+    line-height: 32px;
     border: 1px solid #FFF;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
@@ -15,23 +43,41 @@
     text-indent: 5px;
     color: #FFF;     
 }
-.inpbox .icon-del {
-    content: " ";
-    display: none;
-    position: absolute;
-    top: 8px;
-    right: 78px;
-    width: 15px;
-    height: 15px;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcRJREFUeNqMkz9IAnEUx+9+SApi1x9oEKRaKhdbRCwaanGJlqilpUGiUWgQagsi1yCIjhqCEA5pcGoqQooEbdElOEICEWkQuVMx0NO+T+4Hx2HUgy/+7v2+n+d7z1Ps9/uCLVZM+aE5SIXeoRdTgxBFURAt8Dh0BK0Jv8cTdArVrbAPuoYmhb+jBu0ArjEcWK/XS/wTpJiE/5AOBEcYYwv8JpPJHFer1Turu9vtfqVSqYNWq1UcQIytouMI63Q661ZjOBye8Xq9F+VyWeFgIpGIB4PBT5fLNc194DYcCL8Vdjqdu6j6jZlkVVWbiqI8R6NRHQVlXEvcR906YBobMtc+CjRxd1ssFkcAJpGbshoAe5hhGJqdpFbT6XQWBcRAIKBhBw92D5bWYO12W7WDNGMoFDLwmEKBKL75iu+AB7gPoVQqbcPwxoWtLlUqFR/O95b8HvyeRqMh8xz2sUltuXO53A0WNWu2kzN/ulFbp6+AFrEHt67rWUmS4qxQKLSSyeQJZq+biwgNASmWCSSfLMtn1Llgvp6OWCw2r2nauXUEu+iefObLJQxgswAlJvL5/BbausTiHgmgT3qmPN2Tj/+ZfgQYAEcbH9KLAAltAAAAAElFTkSuQmCC) center center no-repeat;
-    cursor: pointer;
-}
-.inpbox button {
+
+.searchbox .iptbox button {
     float: left;
     width: 55px;
     height: 32px;
     border: none;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+    background: #FFF;
     color: #1098ff;
 }
+
+.searchbox .iptbox em {
+    display: none;
+}
+.searchbox .iptbox.del em, .searchbox .iptbox.loading em{
+    content: " ";    
+    position: absolute;
+    display: block;
+    top: 8px;
+    right: 100px;
+    z-index: 1000;
+}
+
+.searchbox .iptbox.del em{
+    width: 15px;
+    height: 15px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcRJREFUeNqMkz9IAnEUx+9+SApi1x9oEKRaKhdbRCwaanGJlqilpUGiUWgQagsi1yCIjhqCEA5pcGoqQooEbdElOEICEWkQuVMx0NO+T+4Hx2HUgy/+7v2+n+d7z1Ps9/uCLVZM+aE5SIXeoRdTgxBFURAt8Dh0BK0Jv8cTdArVrbAPuoYmhb+jBu0ArjEcWK/XS/wTpJiE/5AOBEcYYwv8JpPJHFer1Turu9vtfqVSqYNWq1UcQIytouMI63Q661ZjOBye8Xq9F+VyWeFgIpGIB4PBT5fLNc194DYcCL8Vdjqdu6j6jZlkVVWbiqI8R6NRHQVlXEvcR906YBobMtc+CjRxd1ssFkcAJpGbshoAe5hhGJqdpFbT6XQWBcRAIKBhBw92D5bWYO12W7WDNGMoFDLwmEKBKL75iu+AB7gPoVQqbcPwxoWtLlUqFR/O95b8HvyeRqMh8xz2sUltuXO53A0WNWu2kzN/ulFbp6+AFrEHt67rWUmS4qxQKLSSyeQJZq+biwgNASmWCSSfLMtn1Llgvp6OWCw2r2nauXUEu+iefObLJQxgswAlJvL5/BbausTiHgmgT3qmPN2Tj/+ZfgQYAEcbH9KLAAltAAAAAElFTkSuQmCC) center center no-repeat;
+    cursor: pointer;
+}
+
+.searchbox .iptbox.loading em{
+    width: 16px;
+    height: 16px;
+    background: url(/assets/img/loading.gif) center center no-repeat;
+    cursor: pointer;
+}
+
