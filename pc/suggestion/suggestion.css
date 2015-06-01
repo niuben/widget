@@ -33,7 +33,7 @@
     float: left;    
     margin-left: 56px;
     padding-right: 20px;
-    width: 225px;
+    width: 240px;
     height: 32px;
     line-height: 32px;
     border: 1px solid #FFF;
@@ -45,7 +45,8 @@
 }
 
 .searchbox .iptbox button {
-    float: left;
+    float: right;
+    margin-right: 25px;
     width: 55px;
     height: 32px;
     border: none;

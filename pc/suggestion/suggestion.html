@@ -1,3 +1,4 @@
+<meta charset="UTF-8" />
 <link rel="stylesheet" type="text/css" href="../reset.css" />
 <link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" />
 <link rel="stylesheet" type="text/css" href="suggestion.css" />
@@ -5,7 +6,9 @@
     <img src="/assets/img/logo.png" class="logo"/>
     <div class="iptbox">
         <em></em>
-        <input type="text" id="searchipt"/>
+        <input type="text" id="searchipt" style="position:absolute; z-index:2; background: transparent"/>
+        <input type="text" id="searchipt-x" disabled="disabled" style="position:absolute;z-index:1; background: #0082e5; color: #BBB;"/>
+
         <button id="searchbtn">搜索</button>
     </div>                
 </div>
@@ -15,55 +18,45 @@
 <script type="text/javascript">
 	//初始化suggestion
 	$('#searchipt').autocomplete({
-	    dropdownStyle: {width: "300px", top: "45px"},
-	    onkeyPress: function(val){
-	        var query = $.trim(val);
-	        if(query.length != 0) {
-	            $(".iptbox").addClass("del");
-	        }else {
-	            $(".iptbox").removeClass("del");                      
-	        }
-	    },
-	    onEnter: function(val){
-	        var query = $.trim(val);
-	        amap.fwd("/search?" + $.param({
-	            query : query
-	        }));
-	    },
-	    onFocus: function(val) {
-	        var query = $.trim(val);
-	        if(query.length != 0) {
-	            $(".iptbox").addClass("del");
-	        }  
-	    },
-	    onBlur: function() {
-	        setTimeout(function(){
-	            $(".iptbox").removeClass("del");
-	        }, 200);
-	    },
-	    openOnFocus: true,
-	    appendMethod: "replace",
-	    source:[
-	        function(word, add){                
-	            $.ajax({
-	                url: "data.js?city=110000&words=" + word,
-	                method: 'get',
-	                dataType: "json",
-	                success: function(msg){
-	                    if(!msg.data || !msg.data.tip_list) {
-	                        return false;
-	                    }
-	                    var tips = msg.data.tip_list,
-	                        messArray = [];
-	                    for(var i = 0; i < tips.length; i++){
-	                        messArray.push(tips[i].tip);
-	                    }
-	                    add(messArray);
-	                }
-	            });
-	        }
-	    ]
-	}); 
+		    serviceUrl: 'http://pan.opendev.autonavi.com:3100/service/poiTips',
+		    paramName: 'words',
+		    params: {
+		    	city: '110000'
+		    },
+		    dataType: "json",
+        	width: 300,
+        	maxHeight: 350,
+        	onHint: function (val) {
+            	$('#searchipt-x').val(val);
+        	},
+
+		    transformResult: function(msg){	
+		    	var result = {
+		    		suggestions: []
+		    	};
+		    	
+		    	if( msg.status != "1" ) {
+		    		return result;
+		    	};
+		    	
+		    	var tips = msg.data.tip_list;
+		    	for(var i = 0; i < tips.length; i++){
+		    		result.suggestions.push({
+		    			value: tips[i].tip,
+		    			data: tips[i].tip
+		    		})
+		    	};
+
+		    	return result;
+		    },
+		    onSelect: function (suggestion) {
+		        alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+		    },
+		    onSearchComplete: function(query, suggestion) {
+		    	console.log(query);
+		    	console.log(suggestion);
+		    }
+		});
 
 	//点击删除按钮,清空输入框、删除按钮消失
 	$(".iptbox em").click(function(){

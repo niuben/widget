@@ -78,3 +78,35 @@
 .xdsoft_autocomplete .xdsoft_autocomplete_dropdown > div.active{
 	background-color: #eeeeee;
 }
+
+.autocomplete-suggestions {
+	margin-top: 12px;
+	border: 1px solid #ccc;
+	background: #FFF;
+	overflow: auto;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	cursor: default;
+
+}
+.autocomplete-suggestion { 
+	background: #fff;
+	white-space: nowrap;
+	height: 32px;
+	line-height: 32px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAQCAYAAADAvYV+AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQlJREFUeNp0ks8GQkEUxufeEiWiReQS7dKufbSNogdIb9AixdUjtLpEmx6gaBmlaNu+XaKIiLRodYk29R2+qzHdDr+ZM+d88+c4Y6nhW9FyoA9q9C9gCQb0lUVxGcxBmhufIE7/ARpga2NwNKEHsiDB2WNc8k4UQ5eBEeipr924joG26OQZRzh5kOGVpslBd3C2tWLChMGbJZ8Tsc/dkT/iCPO+iDcgBVp/xC3mN/LmIpwdb2iCtSasgglIgpKcvAcur1px45jzinHJ7y2tgwt2zzTpYl0cWwt2wMsQvhhXpvjEjunmMa70vxGYFHLgF7iCAgv/OVkx4dJ3daFYNKSgKaiAmZn4CDAAhdA+CQ/5frYAAAAASUVORK5CYII=) 10px center no-repeat;
+	cursor: pointer;
+	text-indent: 30px;
+	font-size: 14px;
+	overflow: hidden;
+	color: #404040;
+}
+.autocomplete-no-suggestion { 
+	padding: 2px 5px;
+}
+.autocomplete-selected { 
+	background-color: #eeeeee; 
+}
+.autocomplete-suggestions strong { 
+	color: #0082e5;
+}
