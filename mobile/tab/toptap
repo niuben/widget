@@ -1,0 +1,54 @@
+<style>
+  #topnav {
+	position: relative;
+	width: 300px;
+	margin: 0 auto;
+
+	a {
+		width: 33%;
+		position: relative;
+		float: left;
+		text-align: center;
+		height: 32px;
+		line-height: 32px;
+		border: 1px solid #d1d2d3;
+		box-sizing: border-box;
+		color: #569ce1;
+	} 
+	
+	a.cur, a:hover, a:target {
+		color: #5e7187;
+		border-color: #71a9e0;
+		background: #d9ebff;
+	}
+
+	a:first-child {
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+	
+	a:last-child {
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+	/*
+	a:target{
+	width: 100%;
+	bottom: 0px;
+	height: 3px;
+	left: 0px;
+	background-color: #D8D8D8;
+	position: absolute;
+	content: "";
+	}	
+	*/
+	/*a.cur:after{
+		background-color: #FF7900;
+	}*/
+}	
+</style>
+<nav id="topnav" class="pt20 pb20 clearfix">
+	<a class="cur" href="#check">待提交</a> 
+	<a class="" href="#checking" >审核中</a> 
+	<a class=""  href="#checked">审核完</a>
+</nav>
