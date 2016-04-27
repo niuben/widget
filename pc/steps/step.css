@@ -1,0 +1,75 @@
+/*分步导航*/
+.stepNav{
+	position: relative;
+	text-align: center;
+	background: #FFF;
+	border-bottom: 1px solid #dae4eb;
+}
+.stepNav .downArrow{
+	content: ' ';
+	position: absolute;
+	bottom: -7px;
+	left: 10%;
+	margin-left: -5px;
+	width: 11px;
+	height: 7px;
+	background: url(./img/downArrow.png) no-repeat center center;
+}
+.stepNav ul{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.stepNav ul li{
+	width: 20%;
+	float: left;
+	list-style: none;
+	font-size: 14px;
+}
+.stepNav ul li a{
+	display: block;
+	position: relative;
+	z-index: 1;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	width: 44px;
+	height: 44px;
+	border-radius: 22px;
+	line-height: 44px;
+	background-repeat: no-repeat;
+	background-position: center center;  
+	font-size: 16px;
+	cursor: default;
+}
+.stepNav ul li a.active{
+	font-weight: bold;
+	cursor: pointer;
+}
+.stepNav ul li a.icon-choose,.stepNav ul li a.icon-choose.active{
+	background-image: url(./img/step-choose.png);
+}
+
+.stepNav ul li a.icon-mess{
+	background-image: url(./img/step-mess-off.png);
+}
+.stepNav ul li a.icon-mess.active{
+	background-image: url(./img/step-mess.png);
+}
+.stepNav ul li a.icon-upload{
+	padding: 0;
+	background-image: url(./img/step-upload-off.png);
+}
+.stepNav ul li a.icon-upload.active{
+	background-image: url(./img/step-upload.png);
+}
+.stepNav ul li a.icon-map{
+	background-image: url(./img/step-map-off.png);
+}
+.stepNav ul li a.icon-map.active{
+	background-image: url(./img/step-map.png);
+}
+.stepNav ul li a.icon-preview{
+	background-image: url(./img/step-preview-off.png);
+}
+.stepNav ul li a.icon-preview.active{
+	background-image: url(./img/step-preview.png);
+}
