@@ -1,0 +1,26 @@
+.progress, .inner {
+	background-color: #eeeeee;
+	width: 150px;
+    border: 0;
+    height: 10px;
+	display: inline-block;
+	border-radius: 5px; 
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px; 
+}
+.progress{
+	margin-left: 5px;
+	margin-right: 10px;
+	position:relative;
+	background: #eeeeee;
+	text-align: left;
+	/*border-radius: 1px;*/
+	
+	.inner{
+		position:absolute;
+		background: #fae16f;
+		width: 0%;
+		top:0;
+		left:0;
+	}
+}
