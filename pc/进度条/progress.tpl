@@ -1,3 +1,6 @@
 <div class="progress">
-	<div class="inner" style="background:#fae16f;width:4%"></div>
+	<div class="bar">
+		<div class="inner" style="width:4%"></div>		
+	</div>
+	50%
 </div>

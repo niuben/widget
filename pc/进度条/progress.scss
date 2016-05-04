@@ -1,26 +1,27 @@
-.progress, .inner {
-	background-color: #eeeeee;
-	width: 150px;
-    border: 0;
-    height: 10px;
-	display: inline-block;
-	border-radius: 5px; 
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px; 
-}
 .progress{
-	margin-left: 5px;
-	margin-right: 10px;
-	position:relative;
-	background: #eeeeee;
-	text-align: left;
-	/*border-radius: 1px;*/
-	
-	.inner{
-		position:absolute;
-		background: #fae16f;
-		width: 0%;
-		top:0;
-		left:0;
+	color: #189bfe;
+	padding-right: 30px;
+	.bar, .inner {
+		width: 120px;
+	    border: 0;
+	    height: 12px;
+		display: inline-block;
+		border-radius: 4px; 
+	    -moz-border-radius: 4px;
+	    -webkit-border-radius: 4px;
+	    overflow: hidden;
+	    text-align: right;
+	}
+	.bar {
+		position: relative;
+		background: #f0f0f0;
+		padding-right: 30px;
+		.inner{
+			position:absolute;
+			background: #0091ff;
+			width: 0%;
+			top: 0;
+			left: 0;
+		}
 	}
 }
