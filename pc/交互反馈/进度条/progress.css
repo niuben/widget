@@ -1,0 +1,28 @@
+.progress {
+  color: #189bfe;
+  padding-right: 30px;
+}
+.progress .bar,
+.progress .inner {
+  width: 120px;
+  border: 0;
+  height: 12px;
+  display: inline-block;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  overflow: hidden;
+  text-align: right;
+}
+.progress .bar {
+  position: relative;
+  background: #f0f0f0;
+  padding-right: 30px;
+}
+.progress .bar .inner {
+  position: absolute;
+  background: #0091ff;
+  width: 0%;
+  top: 0;
+  left: 0;
+}

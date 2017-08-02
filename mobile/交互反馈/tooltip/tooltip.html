@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="./tooltip.css">
+<div class="tooltip">	
+	<a class="icon-back"></a>
+	<a class="icon-refresh" onclick="./tooltip.reload()"></a>
+	<a class="icon-share"></a>
+	<a class="icon-list" href="javascript:void(0)" ></a>
+    {%widget name="index:widget/menutip/menutip.tpl"%}
+</div>
+<script src="./tooltip.js"></script>
+<script>
+	var isShare = true;
+	$(".icon-back").on("click", function(e){
+		 e.preventDefault();
+		if(isShare === "1") {
+			location.href = "/";		
+		}else{
+			window.history.go(-1)
+		}		
+	});
+    tooltip.init();
+</script>

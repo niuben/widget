@@ -1,0 +1,38 @@
+.top {
+	position: relative;
+	background-color: #00adef;
+	color: #fcfcfc;
+	margin: 0;
+	padding: 0;
+	height: 42px;
+	line-height: 42px;
+	font-size: 14px;		
+	text-align: center;
+}
+.top img {
+	display: block;
+	width: 100%;
+}
+
+.top .goback, .top .search{
+	position: absolute;
+	cursor: pointer;	
+}
+
+.top .goback {
+	top: 7px;	
+	left: 5px;
+	width: 52px;
+	height: 35px;	
+	background: url(back.png) no-repeat left 4px;
+	background-size: 20px 20px;
+}
+.top button{
+	display: block;
+	position: absolute;
+	top: 7px;
+	right: 5px;
+	width: 70px;
+	height: 30px;
+	line-height: 27px;
+}

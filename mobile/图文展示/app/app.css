@@ -1,0 +1,59 @@
+.app{
+	margin: 20px 0px 0px 0px;
+	position: relative;
+}
+
+.app-icon {
+	width: 67px;
+	height: 67px;
+	background-color: white;
+	background-size: 67px 67px;
+	display: inline-block;
+	vertical-align: top;	
+}
+.app-icon img {
+	width: 100%;
+	height: 100%;
+}
+
+.app-text {
+	margin: 5px 5px 0 5px;
+	display: inline-block;
+	width: 200px;
+	overflow: hidden;	
+}
+
+.app-text h3 {
+	margin: 0;
+	font-size: 16px;	
+	color: #333;
+	width: 172px
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis
+}
+
+.app-star,.app-download{
+	display:inline-block; 
+	/*height: 12px;
+	margin-top: 5px;	*/
+
+}
+.app-download{
+	/*line-height: 20px;*/
+}
+.app-desc{
+	font-size: 12px;
+	margin-top: 5px;
+	color:#8a8a8a;
+}
+.app-dev {	
+	display: inline-block;
+	margin-top: 5px;
+	margin-bottom:0px;
+	max-width: 160px;	
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	white-space: nowrap;
+	overflow: hidden;
+}

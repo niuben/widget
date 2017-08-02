@@ -1,0 +1,24 @@
+h2.title {
+  position: relative;
+  font-size: 26px;
+  text-align: center;
+  font-weight: 500;
+}
+h2.title:before,
+h2.title:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 18px;
+  height: 2px;
+  width: 42%;
+  background: #eee;
+}
+h2:before {
+  left: 0px;
+  margin-right: 20px;
+}
+h2:after {
+  right: 0px;
+  margin-left: 20px;
+}

@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="./rank.css">
+<ul class="rank">
+{%foreach from=$content item=app name=rank%}	
+	{%if $smarty.foreach.rank.index + 1 eq 1 and $index eq 1 %}
+	<a href="#">
+		<li class="first">
+			<b>1</b>	
+			<div class="applist-icon loaded">
+				<img src="{%$app->iconame%}" />
+			</div>
+			<div class="applist-text">
+				<h3>标题</h3>
+				<div class="applist-grade">评分</div>
+			</div>
+				<a class="button" href="#">打开</a>
+			
+		</li>
+	</a>
+	<a href="#">
+		<li class="second">
+			<b>1</b>	
+			<div class="applist-icon loaded">
+				<img src="{%$app->iconame%}" />
+			</div>
+			<div class="applist-text">
+				<h3>标题</h3>
+				<div class="applist-grade">评分</div>
+			</div>
+				<a class="button" href="#">打开</a>
+			
+		</li>
+	</a>
+	<a href="#">
+		<li class="third">
+			<b>1</b>	
+			<div class="applist-icon loaded">
+				<img src="{%$app->iconame%}" />
+			</div>
+			<div class="applist-text">
+				<h3>标题</h3>
+				<div class="applist-grade">评分</div>
+			</div>
+				<a class="button" href="#">打开</a>
+			
+		</li>
+	</a>
+
+</ul>

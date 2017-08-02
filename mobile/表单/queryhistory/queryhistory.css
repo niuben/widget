@@ -1,0 +1,21 @@
+.history {
+	/* display: none; */
+}
+.history-delete {
+	background-color: #f15151;
+	background-image: url(delete.png);
+}
+.history-list {
+	margin: 5px;
+	margin-top: 15px;
+}
+.history-list li {
+	height: 40px;
+	line-height: 40px;
+	text-indent: 1px;
+	color: #00adef;
+	border-bottom: 1px solid #dadfe2;
+}
+.history-list li:last-child {
+	border-bottom: none;
+}

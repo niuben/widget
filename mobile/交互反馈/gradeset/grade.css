@@ -1,0 +1,27 @@
+.grade{
+	display:inline-block; 
+	margin-right: 0px;
+	width: 80px;
+	height: 17px;
+}
+.grade em{
+	display: block;
+	float: left;
+	height: auto;
+	width: 18.4%;
+	height: 100%;
+	margin-right: 2%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	background: url(star.png) no-repeat;
+	background-size: 100% auto;
+}
+.grade em:last-child{
+	margin-right: 0%;
+}
+.grade em.half{
+	background-image: url(star1.png);	
+}
+.grade em.empty{
+	background-image: url(star0.png);;	
+}

@@ -1,0 +1,86 @@
+.applist {
+	margin-left: 8px;
+	margin-right: 8px;
+}
+.applist h2 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: 18px;
+	text-indent: 5px;
+}
+.applist ul {
+
+}
+.applist ul li{
+	padding: 10px;
+	margin-bottom: 10px;
+	background: #FFF;
+	position: relative;
+}
+
+.applist-icon {
+	width: 67px;
+	height: 67px;
+	background-color: white;
+	background-size: 67px 67px;
+	display: inline-block;
+	vertical-align: top;	
+}
+.applist-icon img {
+	width: 100%;
+	height: 100%;
+}
+
+.applist-text {
+	margin: 5px 5px 0 5px;
+	display: inline-block;
+	width: 200px;
+	overflow: hidden;	
+}
+
+.applist-text h3 {
+	margin: 0;
+	width: 172px;
+	margin-top: 8px;
+	margin-bottom: 10px;
+	font-size: 18px;	
+	color: #333;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis
+}
+
+.applist-star,.applist-download{
+	display:inline-block; 
+	/*height: 12px;
+	margin-top: 5px;	*/
+
+}
+.applist-download{
+	/*line-height: 20px;*/
+}
+.applist-desc{
+	font-size: 12px;
+	margin-top: 5px;
+	color:#8a8a8a;
+}
+.applist-dev {	
+	display: inline-block;
+	margin-top: 5px;
+	margin-bottom:0px;
+	max-width: 160px;	
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.applist-grade {
+	width: 80px;
+	height: 17px;
+}
+.applist li button {
+	position: absolute;
+	right: 10px;
+	top: 25px;
+	width: 70px;
+}

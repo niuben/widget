@@ -1,0 +1,97 @@
+.hotquery-refresh {
+    background-color: #00adef;
+    background-image: url(hotquery.png);
+}
+.hotquery-list li span{
+    float: left;
+    margin-top: 8px;
+    overflow: hidden;
+    height: 38px;
+    line-height: 38px;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;    
+}
+
+.hotquery-list li span:last-child{
+    margin-right: 0px;
+}
+.hotquery-list li span a{
+    color: #FFF;
+}
+.hotquery-list li:after{
+    content: '\0020';
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.hotquery-list li{
+    *zoom: 1;
+}
+
+.hotquery-list li.line2 span:first-child {
+    width: 35%;
+    margin-right: 1.5%;
+}
+
+.hotquery-list li.line2 span:last-child {
+    width: 63.5%;
+}
+
+.hotquery-list li.line3 span:first-child {
+    width: 31%;
+    margin-right: 1.5%;
+}
+
+.hotquery-list li.line3 span:nth-child(2n) {
+    width: 21%;
+    margin-right: 1.5%;
+}
+.hotquery-list li.line3 span:last-child {
+    width: 45%;
+}
+
+.hotquery-list li.lineOther3 span:first-child {
+    width: 40%;
+    margin-right: 1.5%;
+}
+
+.hotquery-list li.lineOther3 span:nth-child(2n) {
+    width: 25%;
+    margin-right: 1.5%;
+}
+.hotquery-list li.lineOther3 span:last-child {
+    width: 32%;
+}
+
+
+/* 清蓝色 */        
+.color1{
+    background:#58cbe8; 
+}
+/* 灰色：*/   
+.hotquery-list span.color2{
+    background: #e9eff7;
+    
+}
+.hotquery-list span.color2 a{
+    color: #545b61;
+}
+/* 红色 */  
+.color3{
+    background: #f15151;
+}
+/* 蓝色 */  
+.color4{
+    background: #4a84d7;
+}
+/* 棕色 */  
+.color5{
+    background: #e8ba58;
+}
+/*青紫：*/  
+.color6{
+    background: #9b71e8;
+}

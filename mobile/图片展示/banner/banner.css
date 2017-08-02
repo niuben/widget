@@ -1,0 +1,25 @@
+.banner {
+	/* display: none; */
+	position: fixed;
+	left: 0px;
+	bottom: 55px;
+	height: 80px;
+	line-height: 80px;
+	width: 100%;
+	text-align: center;
+	background: #00adef;
+}
+.banner .close {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	width: 30px;
+	height: 30px;
+	background: url(close.png) center center no-repeat;
+	background-size: 15px;
+}
+.banner img {
+	width: 175px;
+	height: 48px;
+	margin-top: 15px;
+}

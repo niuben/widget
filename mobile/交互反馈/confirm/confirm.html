@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="./confirm.css" />
+<div class="confirm" id="confirmBox">	
+	<div class="confirm-title">
+		提示
+		<a href="javascript:void(0)" class="confirm-close">x</a>
+	</div>
+	<div class="confirm-body"></div>
+	<div class="confirm-foot alert-foot">
+		<a class="confirm-ok" href="javascript:void(0)">查看分享</a>
+		<a class="confirm-cancel" href="javascript:void(0)">随便逛逛</a>
+	</div>
+</div>
+<div class="mask"></div>
+<script src="./confirm.js"></script>
+<script>
+	var confirm = new Confirm({
+		id: "confirmBox"
+	});
+	confirm.alert("这是弹出框！");
+</script>

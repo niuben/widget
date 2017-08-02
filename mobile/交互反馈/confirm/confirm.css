@@ -1,0 +1,80 @@
+.confirm {
+  display: none;
+  position: fixed;
+  left: 5%;
+  top: 50%;
+  z-index: 99999;
+  background: #FFF;
+  /*border: 1px solid #d4d4d4;*/
+  border-radius: 1px;
+  width: 90%;
+  font-family: "黑体";
+}
+.confirm-title {  
+  position: relative;
+  height: 45px;
+  line-height: 45px;
+  text-indent: 20px;
+  border-bottom: 1px solid #00adef;
+}
+.confirm-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  text-indent: 0;
+  font-size: 20px;
+}
+.confirm-body {
+  padding: 15px;
+  height: 40px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #000000;
+}
+.confirm-foot {
+  border-top: 1px solid #00adef;
+}
+.confirm-foot a {
+  float: left;
+  height: 44px;
+  width: 50%;
+  line-height: 44px;
+  text-align: center;
+  text-decoration: none;
+  color: #00adef;
+  font-size: 12px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.confirm-foot a.confirm-cancel {
+  border-left: 1px solid #00adef;
+  color: #93999c;
+}
+
+.alert-foot a {
+  width: 100%;
+}
+.alert-foot a.confirm-cancel {
+  display: none;
+}
+.alert-foot a.confirm-ok {
+  /*width: 100%;  */
+}
+.mask {
+  display: none;
+  background: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99998;
+  height: 100%;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-transform-origin: 0px 0px;
+  -webkit-user-select: none;
+}

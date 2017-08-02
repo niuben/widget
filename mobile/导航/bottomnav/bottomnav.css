@@ -1,0 +1,56 @@
+/* 底部导航 */
+.bottomNav {
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	margin: 0;
+	width: 100%;
+	height: 55px;
+	background: rgba(251, 251, 251, 0.85);
+	overflow: hidden;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	/*border-top: 1px solid #b2b2b2;*/
+	color: #7d8085;
+
+}
+.bottomNav a {
+	float: left;
+	position: relative;
+	width: 33.33%;
+	overflow: hidden;
+	font-size: 14px;
+	text-align: center;
+}
+.bottomNav a.current {
+	color: #008def;
+}
+.bottomNav a span {
+	display: block;
+	margin: 7px auto 5px;
+	height: 24px;
+	width: 24px;
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+	background-position: center;  
+	color: #fff;
+	font-size: 12px;
+}
+
+.bottomNav a:first-child span {
+	background-image: url(./star.png);
+}
+.bottomNav a:first-child.current span {
+	background-image: url(./star-active.png);
+}
+.bottomNav a:nth-child(2) span {
+	background-image: url(type.png);
+}
+.bottomNav a:nth-child(2).current span {
+	background-image: url(./type-active.png);
+}
+.bottomNav a:last-child span {
+	background-image: url(rank.png);
+}
+.bottomNav a:last-child.current span {
+	background-image: url(./rank-active.png);
+}

@@ -1,0 +1,96 @@
+.list table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 100%;
+}
+.list table tbody {
+  width: 98%;
+  margin: 0 auto;
+}
+.list table th,
+.list table td {
+  height: 56px;
+  line-height: 56px;
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  overflow: hidden;
+}
+.list table th {
+  border-bottom: none;
+  background: #f2f9ff;
+  font-weight: normal;
+}
+.list table td {
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+  font-size: 14px;
+  color: #464646;
+}
+.list table td a {
+  color: #0091ff;
+  margin-left: 15px;
+}
+.list table td a:hover {
+  text-decoration: underline;
+}
+.list table td img {
+  padding: 10px;
+  vertical-align: middle;
+  display: none;
+}
+.list table td input {
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #0091ff;
+  border-radius: 5px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.list table tr:hover {
+  background: #f2f9ff;
+}
+.list table tr:hover td:first-child,
+.list table tr:hover td:last-child {
+  /*background: #FFF; */
+}
+.list table td:first-child,
+.list table td:last-child {
+  border-bottom: none;
+}
+.list table tr.edit:hover {
+  cursor: initial;
+}
+.list table tr.edit td img {
+  display: none;
+}
+.list table tr.table-head:hover {
+  background: transparent;
+}
+.list table tr {
+  /*cursor: pointer;*/
+}
+.list table tr span.download,
+.list table tr span.delete {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -16px;
+  margin-left: -72px;
+  width: 45px;
+  height: 32px;
+  line-height: 32px;
+  color: #0091ff;
+}
+.list table tr span.delete {
+  margin-left: 27px;
+}
+.list table td.table-name {
+  width: 320px;
+  text-indent: 10px;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

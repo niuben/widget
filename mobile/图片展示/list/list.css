@@ -1,0 +1,59 @@
+.list {
+	background: #FFF;
+}
+.list h2 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: 18px;
+	text-indent: 5px;
+}
+.list li {
+	float: left;
+	position: relative;
+	margin-bottom: 10px;
+	margin-right: 4%;	
+	text-align: center;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+  	width: 22%;
+}
+.list li:nth-child(4n) {
+	margin-right: 0%;
+}
+.list-icon {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	background-color: white;
+	background-size: 100% auto;
+	vertical-align: top;	
+}
+.list-icon img {
+	width: 90%;
+	/*height: 100%;*/
+}
+
+.list li h3 {
+	margin: 0;
+	margin-top: 8px;
+	margin-bottom: 4px;
+	font-size: 12px;	
+	color: #333;
+	white-space: nowrap;
+	/*overflow: hidden;*/
+	/*text-overflow: ellipsis*/
+}
+
+.list li a.button {
+	margin: 0 auto;
+	/*margin-top: 5px;	*/
+	display: block;
+	width: 90%;
+	height: 25px;
+	line-height: 25px;
+	font-size: 12px;
+}
+.list li .grade {
+	width: 100%;
+}

@@ -1,0 +1,87 @@
+.top {
+	position: relative;
+	background-color: #00adef;
+	color: #fcfcfc;
+	margin: 0;
+	padding: 0;
+	height: 42px;
+	line-height: 42px;
+	font-size: 14px;		
+	text-align: center;
+}
+.top img {
+	display: block;
+	width: 100%;
+}
+
+.top .goback, .top .search, .top .setting{
+	position: absolute;
+	cursor: pointer;	
+}
+
+/* 返回 */
+.top .goback {
+	top: 7px;	
+	left: 5px;
+	width: 52px;
+	height: 35px;	
+	background: url(back.png) no-repeat left 4px;
+	background-size: 20px 20px;
+}
+
+/* 设置 */
+.top .setting {
+	top: 7px;	
+	left: 0px;
+	width: 35px;
+	height: 35px;	
+	background: url(setting.png) no-repeat center 4px;
+	background-size: 20px 20px;	
+}
+
+/* 搜索框样式 */
+.top .searchText {
+	padding-top: 2px;
+	margin-left: 45px;
+	margin-right: 45px; 
+	overflow: hidden;
+}
+
+.top .searchText input {	
+	display: block;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	border: none;
+	background: none;
+	border-bottom: 1px solid #ffffff;
+	text-indent: 4px;
+	font-size: 16px;
+	color: #FFF;
+}
+.top .searchText input::-webkit-input-placeholder {
+    color: #81d8f9;
+}
+
+/* 搜索按钮 */
+.top .search{
+	display: block;
+	top: 10px;
+	right: 10px;
+	width: 23px;
+	height: 23px;
+	border: none;
+	background: url(search.png) no-repeat center center;
+	background-size: 23px 23px;
+}
+
+.top button{
+	display: block;
+	position: absolute;
+	top: 7px;
+	right: 5px;
+	width: 70px;
+	height: 30px;
+	line-height: 27px;
+}
+

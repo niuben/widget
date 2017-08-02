@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="./app.css">
+<div class="app">
+	<div class="app-icon loaded">
+		<img src="{%$icon%}"/>
+	</div>
+	<div class="app-text">
+		<h3>{%$title%}</h3>
+		<div class="app-desc">
+			<div>
+				{%widget name="index:widget/grade/grade.tpl" grade=$grade%}
+				<span class="app-download"><!-- 5000万+下载 --></span>
+			</div>						
+			<!-- <p class="app-dev">5000万+下载</p> -->
+		</div>
+	</div>				
+</div>

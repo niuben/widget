@@ -1,0 +1,32 @@
+.comment {		
+	padding: 10px;
+	border-bottom: 1px dashed #cdd1d4;
+}
+.comment > div {
+	height: 30px;
+	line-height: 30px;
+}
+.comment .clearfix:after{
+	content: '\0020';
+	display: block;
+	height: 0;
+	clear: both;
+}
+.clearfix{
+	*zoom: 1;
+}
+
+.comment-user {
+	float: left;
+	width: 30%;	
+	color: #ee762d;
+}
+.comment-infor {
+	float: right;
+	width: 69%;
+	text-align: right;
+}
+.comment-date {
+	margin-left: 5px;
+	color: #b7b9bb;
+}

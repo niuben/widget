@@ -1,0 +1,89 @@
+.hotnav {
+    margin: 8px;
+}
+.hotnav li a{
+    float: left;
+    margin-top: 8px;
+    overflow: hidden;
+    height: 38px;
+    line-height: 38px;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;    
+}
+.hotnav li a:last-child{
+    margin-right: 0px;
+}
+.hotnav li:after{
+    content: '\0020';
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.hotnav li{
+    *zoom: 1;
+}
+
+.hotnav li.line2 a:first-child {
+    width: 35%;
+    margin-right: 1.5%;
+}
+
+.hotnav li.line2 a:last-child {
+    width: 63.5%;
+}
+
+.hotnav li.line3 a:first-child {
+    width: 31%;
+    margin-right: 1.5%;
+}
+
+.hotnav li.line3 a:nth-child(2n) {
+    width: 21%;
+    margin-right: 1.5%;
+}
+.hotnav li.line3 a:last-child {
+    width: 45%;
+}
+
+.hotnav li.lineOther3 a:first-child {
+    width: 40%;
+    margin-right: 1.5%;
+}
+
+.hotnav li.lineOther3 a:nth-child(2n) {
+    width: 25%;
+    margin-right: 1.5%;
+}
+.hotnav li.lineOther3 a:last-child {
+    width: 32%;
+}
+
+
+/* 清蓝色 */        
+.color1{
+    background:#58cbe8; 
+}
+/* 白色：*/   
+.hotnav a.color2{
+    background: #FFF;
+    color: #545b61;
+}
+/* 红色 */  
+.color3{
+    background: #f15151;
+}
+/* 蓝色 */  
+.color4{
+    background: #4a84d7;
+}
+/* 棕色 */  
+.color5{
+    background: #e8ba58;
+}
+/*青紫：*/  
+.color6{
+    background: #9b71e8;
+}

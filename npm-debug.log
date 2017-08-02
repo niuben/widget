@@ -1,0 +1,243 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.3.12
+3 info using node@v5.2.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/niuben/www/person/widget',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/niuben/.npm/widget/0.0.1/package.tgz not in flight; packing
+9 info lifecycle widget@0.0.1~prepublish: widget@0.0.1
+10 silly lifecycle widget@0.0.1~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ '/Users/niuben/.npm/widget/0.0.1/package.tgz',
+11 verbose tar pack   '/Users/niuben/www/person/widget' ]
+12 verbose tarball /Users/niuben/.npm/widget/0.0.1/package.tgz
+13 verbose folder /Users/niuben/www/person/widget
+14 verbose addLocalTarball adding from inside cache /Users/niuben/.npm/widget/0.0.1/package.tgz
+15 silly cache afterAdd widget@0.0.1
+16 verbose afterAdd /Users/niuben/.npm/widget/0.0.1/package/package.json not in flight; writing
+17 verbose afterAdd /Users/niuben/.npm/widget/0.0.1/package/package.json written
+18 silly publish { name: 'widget',
+18 silly publish   version: '0.0.1',
+18 silly publish   description: 'latte lib',
+18 silly publish   keywords: [ 'latte' ],
+18 silly publish   author: { name: 'ben' },
+18 silly publish   main: 'index.js',
+18 silly publish   repository: { type: 'git', url: 'git+https://github.com/niuben/widget.git' },
+18 silly publish   dependencies: {},
+18 silly publish   gitHead: '113b459ddbe814dde00c5586298077a757001f9a',
+18 silly publish   bugs: { url: 'https://github.com/niuben/widget/issues' },
+18 silly publish   readme: 'ERROR: No README data found!',
+18 silly publish   homepage: 'https://github.com/niuben/widget#readme',
+18 silly publish   _id: 'widget@0.0.1',
+18 silly publish   scripts: {},
+18 silly publish   _shasum: 'd866ac8743c1925e580376c6089e93bc2b490358',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name widget
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/widget
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /Users/niuben/.npm/widget/0.0.1/package.tgz
+26 verbose request uri https://registry.npmjs.org/widget
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 22:01:40
+29 verbose request using bearer token for auth
+30 verbose request id 8527fb9a8891aed9
+31 http request PUT https://registry.npmjs.org/widget
+32 http 503 https://registry.npmjs.org/widget
+33 verbose bad json <?xml version="1.0" encoding="utf-8"?>
+33 verbose bad json <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+33 verbose bad json  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+33 verbose bad json <html>
+33 verbose bad json   <head>
+33 verbose bad json     <title>503 backend write error</title>
+33 verbose bad json   </head>
+33 verbose bad json   <body>
+33 verbose bad json     <h1>Error 503 backend write error</h1>
+33 verbose bad json     <p>backend write error</p>
+33 verbose bad json     <h3>Guru Mediation:</h3>
+33 verbose bad json     <p>Details: cache-itm7421-ITM 1465567423 2247048673</p>
+33 verbose bad json     <hr>
+33 verbose bad json     <p>Varnish cache server</p>
+33 verbose bad json   </body>
+33 verbose bad json </html>
+34 error registry error parsing json
+35 verbose headers { server: 'Varnish',
+35 verbose headers   'retry-after': '0',
+35 verbose headers   'content-type': 'text/html; charset=utf-8',
+35 verbose headers   'content-length': '451',
+35 verbose headers   'accept-ranges': 'bytes',
+35 verbose headers   date: 'Fri, 10 Jun 2016 14:03:43 GMT',
+35 verbose headers   via: '1.1 varnish',
+35 verbose headers   connection: 'close',
+35 verbose headers   'x-served-by': 'cache-itm7421-ITM',
+35 verbose headers   'x-cache': 'MISS',
+35 verbose headers   'x-cache-hits': '0',
+35 verbose headers   'x-timer': 'S1465567302.480426,VS0,VE120549' }
+36 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+36 info retry
+36 info retry <?xml version="1.0" encoding="utf-8"?>
+36 info retry <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+36 info retry  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+36 info retry <html>
+36 info retry   <head>
+36 info retry     <title>503 backend write error</title>
+36 info retry   </head>
+36 info retry   <body>
+36 info retry     <h1>Error 503 backend write error</h1>
+36 info retry     <p>backend write error</p>
+36 info retry     <h3>Guru Mediation:</h3>
+36 info retry     <p>Details: cache-itm7421-ITM 1465567423 2247048673</p>
+36 info retry     <hr>
+36 info retry     <p>Varnish cache server</p>
+36 info retry   </body>
+36 info retry </html>
+37 info attempt registry request try #2 at 22:03:53
+38 verbose request using bearer token for auth
+39 http request PUT https://registry.npmjs.org/widget
+40 http 503 https://registry.npmjs.org/widget
+41 verbose bad json <?xml version="1.0" encoding="utf-8"?>
+41 verbose bad json <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+41 verbose bad json  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+41 verbose bad json <html>
+41 verbose bad json   <head>
+41 verbose bad json     <title>503 backend write error</title>
+41 verbose bad json   </head>
+41 verbose bad json   <body>
+41 verbose bad json     <h1>Error 503 backend write error</h1>
+41 verbose bad json     <p>backend write error</p>
+41 verbose bad json     <h3>Guru Mediation:</h3>
+41 verbose bad json     <p>Details: cache-itm7421-ITM 1465567555 2247397236</p>
+41 verbose bad json     <hr>
+41 verbose bad json     <p>Varnish cache server</p>
+41 verbose bad json   </body>
+41 verbose bad json </html>
+42 error registry error parsing json
+43 verbose headers { server: 'Varnish',
+43 verbose headers   'retry-after': '0',
+43 verbose headers   'content-type': 'text/html; charset=utf-8',
+43 verbose headers   'content-length': '451',
+43 verbose headers   'accept-ranges': 'bytes',
+43 verbose headers   date: 'Fri, 10 Jun 2016 14:05:55 GMT',
+43 verbose headers   via: '1.1 varnish',
+43 verbose headers   connection: 'close',
+43 verbose headers   'x-served-by': 'cache-itm7421-ITM',
+43 verbose headers   'x-cache': 'MISS',
+43 verbose headers   'x-cache-hits': '0',
+43 verbose headers   'x-timer': 'S1465567434.312453,VS0,VE121117' }
+44 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+44 info retry
+44 info retry <?xml version="1.0" encoding="utf-8"?>
+44 info retry <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+44 info retry  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+44 info retry <html>
+44 info retry   <head>
+44 info retry     <title>503 backend write error</title>
+44 info retry   </head>
+44 info retry   <body>
+44 info retry     <h1>Error 503 backend write error</h1>
+44 info retry     <p>backend write error</p>
+44 info retry     <h3>Guru Mediation:</h3>
+44 info retry     <p>Details: cache-itm7421-ITM 1465567555 2247397236</p>
+44 info retry     <hr>
+44 info retry     <p>Varnish cache server</p>
+44 info retry   </body>
+44 info retry </html>
+45 info attempt registry request try #3 at 22:06:55
+46 verbose request using bearer token for auth
+47 http request PUT https://registry.npmjs.org/widget
+48 http 503 https://registry.npmjs.org/widget
+49 verbose bad json <?xml version="1.0" encoding="utf-8"?>
+49 verbose bad json <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+49 verbose bad json  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+49 verbose bad json <html>
+49 verbose bad json   <head>
+49 verbose bad json     <title>503 backend write error</title>
+49 verbose bad json   </head>
+49 verbose bad json   <body>
+49 verbose bad json     <h1>Error 503 backend write error</h1>
+49 verbose bad json     <p>backend write error</p>
+49 verbose bad json     <h3>Guru Mediation:</h3>
+49 verbose bad json     <p>Details: cache-itm7427-ITM 1465567738 3878435409</p>
+49 verbose bad json     <hr>
+49 verbose bad json     <p>Varnish cache server</p>
+49 verbose bad json   </body>
+49 verbose bad json </html>
+50 error registry error parsing json
+51 verbose headers { server: 'Varnish',
+51 verbose headers   'retry-after': '0',
+51 verbose headers   'content-type': 'text/html; charset=utf-8',
+51 verbose headers   'content-length': '451',
+51 verbose headers   'accept-ranges': 'bytes',
+51 verbose headers   date: 'Fri, 10 Jun 2016 14:08:58 GMT',
+51 verbose headers   via: '1.1 varnish',
+51 verbose headers   connection: 'close',
+51 verbose headers   'x-served-by': 'cache-itm7427-ITM',
+51 verbose headers   'x-cache': 'MISS',
+51 verbose headers   'x-cache-hits': '0',
+51 verbose headers   'x-timer': 'S1465567617.680669,VS0,VE120720' }
+52 verbose request invalidating /Users/niuben/.npm/registry.npmjs.org/widget on PUT
+53 error publish Failed PUT 503
+54 verbose stack SyntaxError: Unexpected token <
+54 verbose stack
+54 verbose stack <?xml version="1.0" encoding="utf-8"?>
+54 verbose stack <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+54 verbose stack  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+54 verbose stack <html>
+54 verbose stack   <head>
+54 verbose stack     <title>503 backend write error</title>
+54 verbose stack   </head>
+54 verbose stack   <body>
+54 verbose stack     <h1>Error 503 backend write error</h1>
+54 verbose stack     <p>backend write error</p>
+54 verbose stack     <h3>Guru Mediation:</h3>
+54 verbose stack     <p>Details: cache-itm7427-ITM 1465567738 3878435409</p>
+54 verbose stack     <hr>
+54 verbose stack     <p>Varnish cache server</p>
+54 verbose stack   </body>
+54 verbose stack </html>
+54 verbose stack
+54 verbose stack     at Object.parse (native)
+54 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:199:23)
+54 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+54 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+54 verbose stack     at emitTwo (events.js:88:13)
+54 verbose stack     at Request.emit (events.js:173:7)
+54 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+54 verbose stack     at emitOne (events.js:83:20)
+54 verbose stack     at Request.emit (events.js:170:7)
+54 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+55 verbose cwd /Users/niuben/www/person/widget
+56 error Darwin 14.0.0
+57 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+58 error node v5.2.0
+59 error npm  v3.3.12
+60 error Unexpected token <
+60 error
+60 error <?xml version="1.0" encoding="utf-8"?>
+60 error <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+60 error  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+60 error <html>
+60 error   <head>
+60 error     <title>503 backend write error</title>
+60 error   </head>
+60 error   <body>
+60 error     <h1>Error 503 backend write error</h1>
+60 error     <p>backend write error</p>
+60 error     <h3>Guru Mediation:</h3>
+60 error     <p>Details: cache-itm7427-ITM 1465567738 3878435409</p>
+60 error     <hr>
+60 error     <p>Varnish cache server</p>
+60 error   </body>
+60 error </html>
+61 error If you need help, you may report this error at:
+61 error     <https://github.com/npm/npm/issues>
+62 verbose exit [ 1, true ]

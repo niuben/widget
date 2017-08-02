@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="./nav.css">
+<div id="navHead">
+    <ul class="clearfix nav">
+        <li> <a href="#">标题</a> </li> 
+        <li class="ui-state-active"> <a href="#">标题</a></li>
+    </ul>
+</div>
+<script src="./iscroll.js"></script>
+<script src="./zepto.js"></script>
+<script>
+    var liNums = $(".nav li").length,
+    totalWidth = 0;    
+
+    //获得整个导航条的宽度
+    $(".nav li").each(function(index){                
+        totalWidth += $(this).width();
+    });
+    $(".nav").css("width", totalWidth + "px");
+    
+    var myScroll = new iScroll('navHead',{
+        hScrollbar: false,
+        vScrollbar: false 
+    });
+    //滚动到
+    myScroll.scrollToElement(".ui-state-active", 400);
+</script>

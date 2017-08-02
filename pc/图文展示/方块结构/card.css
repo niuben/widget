@@ -1,0 +1,61 @@
+.card {
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card li {
+  float: left;
+  position: relative;
+  width: 270px;
+  height: 240px;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 5px;
+}
+.card li h3, .card li p {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+.card li h3 {
+  top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.card li p {
+  bottom: 20px;
+}
+.card li:hover {
+  background-color: #3eacff;
+}
+.card li:hover h3, .card li:hover p {
+  color: #FFF;
+}
+.card .part {
+  background-image: url("./img/part.png");
+}
+.card .part:hover {
+  background-image: url("./img/part-hover.png");
+}
+.card .part1 {
+  background-image: url("./img/part1.png");
+}
+.card .part1:hover {
+  background-image: url("./img/part1-hover.png");
+}
+.card .part2 {
+  background-image: url("./img/part2.png");
+}
+.card .part2:hover {
+  background-image: url("./img/part2-hover.png");
+}
+.card .part3 {
+  background-image: url("./img/part3.png");
+}
+.card .part3:hover {
+  background-image: url("./img/part3-hover.png");
+}
+.card li:first-child {
+  margin-left: 0px;
+}
