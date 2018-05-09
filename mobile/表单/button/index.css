@@ -1,0 +1,95 @@
+#photo_form .photo-select-btn .photo-input{
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.photo-form .tips{
+    /*background: url(/img/tips_words.jpg?v=2014) no-repeat 0 0;*/
+    /*background-size: 100% auto;*/
+    margin: 15px 0;
+    margin-top: 0px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #606060;
+    font-family: "黑体";
+}
+#photo .red-btn, #photo .white-btn, #photo .gray-btn, .more-point-btn{
+    border-radius: 4px;
+    width: 85%;       
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-family: "黑体";
+    font-size: 16px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+#photo .red-btn{    
+    background: -webkit-gradient(linear, left top, left bottom, from(#d42c35), to(#c8141e));
+    color: #FFF;
+}
+#photo .red-btn:active{
+    background: -webkit-gradient(linear, left top, left bottom, from(#c8141e), to(#d42c35));
+}
+#photo .white-btn{
+    border: 1px solid #dedede;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f4f4f4));
+    color: #000;
+}
+#photo .white-btn:active{
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ffffff));
+}
+#photo .gray-btn{
+    background: #b7b7b7;
+    color: #FFF;
+    border: 1px solid #afafaf;
+}
+#photo .gray-btn:active{
+    background: #EEE;    
+}
+.photo-select-btn{        
+    position: relative;
+    margin-top: 20px;
+}
+
+.del { 
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #bbe6ff;    
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAHlBMVEVHcEwMGzYMGzYMGzYMGzYMGzYMGzYMGzYMGzYMGzZJS9DvAAAACXRSTlMAd2a7mUTMqt2xxYZkAAAAP0lEQVQI113PSw4AMAQE0KFf979wRWiVjbyFAUZDFBEgEiYRBodVXZvb5b4y7xdhTjL2rPmNrhJc14bLkf8LB+FXAiPWGFVVAAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #0c1b36;
+    border: none;
+}
+
+.more-point-btn {
+    background: -webkit-gradient(linear, left top, left bottom,#d42c35, #c8141e);
+    color: #FFF;
+}
+
+.transparent{    
+    width: 85%;       
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-family: "黑体";
+    font-size: 16px;
+    background: rgba(36, 124, 202, 0.4);
+    border: none;
+    border-radius: 20px;
+    color: #FFF;
+}
