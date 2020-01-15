@@ -1,4 +1,4 @@
-#photo_form .photo-select-btn .photo-input{
+.photo-select-btn .photo-input{
     height: 100%;
     left: 0;
     opacity: 0;
@@ -19,7 +19,7 @@
     color: #606060;
     font-family: "黑体";
 }
-#photo .red-btn, #photo .white-btn, #photo .gray-btn, .more-point-btn{
+ .red-btn,  .white-btn,  .gray-btn, .more-point-btn{
     border-radius: 4px;
     width: 85%;       
     height: 50px;
@@ -32,27 +32,27 @@
     overflow: hidden;
 }
 
-#photo .red-btn{    
+ .red-btn{    
     background: -webkit-gradient(linear, left top, left bottom, from(#d42c35), to(#c8141e));
     color: #FFF;
 }
-#photo .red-btn:active{
+ .red-btn:active{
     background: -webkit-gradient(linear, left top, left bottom, from(#c8141e), to(#d42c35));
 }
-#photo .white-btn{
+ .white-btn{
     border: 1px solid #dedede;
     background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f4f4f4));
     color: #000;
 }
-#photo .white-btn:active{
+ .white-btn:active{
     background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ffffff));
 }
-#photo .gray-btn{
+ .gray-btn{
     background: #b7b7b7;
     color: #FFF;
     border: 1px solid #afafaf;
 }
-#photo .gray-btn:active{
+ .gray-btn:active{
     background: #EEE;    
 }
 .photo-select-btn{        
