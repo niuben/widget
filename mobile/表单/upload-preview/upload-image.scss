@@ -1,0 +1,67 @@
+.photo {
+    text-align: center;
+    margin-top: 15%;
+    height: 30%;
+    min-height: 170px;
+    .tips {
+        margin-top: p2m(15);
+        font-size: p2m(14);
+                
+    }
+}
+.photo-content {
+    width: p2m(150);
+    height: p2m(150);
+    position: relative;
+    margin: 0 auto;
+    background-color: rgba(0, 202, 155, 0.1);
+    background-image: url("./photo-upload-add.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    border-radius: 15px;
+}
+
+// 上传模块
+.photo-upload {
+    width: 100%;
+    height: 100%;    
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.photo-upload-input {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    border: none;
+}
+
+// 预览模块
+.photo-preview {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;    
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #cbcdd9;
+    overflow: hidden;
+    display: none;    
+    img {        
+        width: 100%;
+    }
+    .photo-preview-delete {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: p2m(30);
+        height: p2m(30);
+        background: url("./photo-preview-delete.svg");
+        background-size: 100% 100%;
+    }
+}

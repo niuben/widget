@@ -1,0 +1,82 @@
+/*
+滑动块样式覆盖
+1. 左边和右边数据
+2. 圆球样式
+3. 圆球选中的样式
+4. 轴的样式
+5. 选中轴的样式
+*/
+.range {
+    height: 20%;
+    min-height: 120px;
+}
+.range-up {
+    text-align: center;    
+}
+.range-up img{
+    vertical-align: middle;
+}
+.range-up span{
+    margin-left: 5px;
+}
+.range-middle {
+    position: relative;
+    width: 60%;
+    padding: 0 30px;
+    margin: 0 auto;
+    margin-top: -20px; 
+}
+.range-middle .range-num{
+    position: absolute;
+    bottom: 14%;
+    height: 20px;
+    line-height: 20px;
+    
+}
+.range-left-num {
+    left: 10px;
+}
+
+.range-right-num {
+    right: -5px;
+}
+
+.range-down {
+    text-align: center;
+    font-size: p2m(14);    
+}
+
+
+.irs--big .irs-handle {    
+    top: 28px !important;
+    width: p2m(18)!important;;
+    height: p2m(18) !important;;
+    background: url("../assets/collectlike/range-slider-handle.svg") no-repeat center center !important;
+    border: none !important;
+    box-shadow: none !important;
+    background-size:  100% 100% !important;
+}
+
+.irs--big .state_hover {
+    // top: 23px !important;
+    // width: p2m(30)!important;;
+    // height: p2m(30) !important;;
+    // background-image: url("../assets/collectlike/range-slider-handle-active.svg") !important;
+    // background-size:  100% 100% !important;
+}
+
+.irs--big .irs-bar {
+    height: 8px !important;
+    background: #00ca9b !important;
+    box-shadow: none !important;
+    border-color: #00ca9b !important;
+}
+
+.irs--big .irs-line {
+    height: 8px !important;
+    border: none !important;
+}
+
+.irs--big .irs-single {
+    display: none !important;
+}

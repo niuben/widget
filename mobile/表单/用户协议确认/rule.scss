@@ -1,0 +1,26 @@
+// 统一隐私协议
+.rule {    
+    margin-top: 10%; 
+    margin-bottom: 10%;
+    height: 20%;
+    min-height: 110px;
+}
+.rule-up {
+    text-align: center;
+    img {
+        vertical-align: middle;        
+    }
+    .checkbox {
+        margin-right: p2m(5);
+        width: p2m(16);
+        height: p2m(16);
+        background: url('../assets/collectlike/checkbox.svg') no-repeat center center;
+    }
+    .checkbox-active {
+        background-image: url('../assets/collectlike/checkbox-active.svg');
+    }
+}
+.rule-down {
+    text-align: center;
+    margin-top: p2m(10);
+}
